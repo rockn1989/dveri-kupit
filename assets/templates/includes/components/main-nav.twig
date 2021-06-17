@@ -1,0 +1,73 @@
+{% set menu = ["Каталог", "Акции", "Входные двери", "Межкомнатные двери", "Фурнитура"] %}
+{% set subMenu = [
+  {count: '56 товаров',name:"Фабрика ЗИОН"},
+  {count: '112 товаров',name:"Фабрика ГРИФФОН"},
+  {count: '23 товаров',name:"Фабрика МАСТЕРСТАЛЬ"},
+  {count: '7 товаров',name:"Фабрика  Промет"},
+  {count: '212 товаров',name:"Фабрика ТРЕЙД-МАРК"},
+  {count: '242 товаров',name:"Комплектующие к мет.дверям"},
+  {count: '161 товаров',name:"Панели ждя мет.дверей"},
+  {count: '150 товаров',name:"Фурнитура"}
+] %}
+
+<!-- begin main-nav -->
+<nav class="main-nav">
+
+	<ul class="main-nav-list">
+		{% for i in 0..4 %}
+			{% if i == 1 %}
+				<li class="main-nav-list__item stock-item">
+					<a href="#">{{menu[i]}}</a>
+				</li>
+			{% else %}
+				<li class="main-nav-list__item">
+					<a href="#">{{menu[i]}}</a>
+					<div class="dropdown-menu" uk-dropdown="pos: bottom-justify; offset: 0; boundary: #page-header; boundary-align: true; delay-hide: 0;">
+						<div class="container">
+							<div class="dropdown-menu-wrapper">
+								<div class="uk-grid  uk-child-width-1-4" uk-grid>
+									{% for i in 0..7 %}
+										{% if i < 5 %}
+											<div class="dropdown-menu__item">
+												<div class="dropdown-menu__item-inner">
+													<a href="" class="dropdown-menu__link">
+														<span class="dropdown-menu__img"><img data-src="img/media/submenu-img-{{i+1}}.png" class="lazy" alt=""></span>
+														<span class="dropdown-menu__text">
+															<span class="dropdown-menu__brand">{{subMenu[i].name}}</span>
+															<span class="dropdown-menu__product-count">{{subMenu[i].count}}</span>
+														</span>
+													</a>
+												</div>
+											</div>
+										{% else %}
+											<div class="dropdown-menu__item">
+												<div class="dropdown-menu__item-inner">
+													<a href="" class="dropdown-menu__link">
+														<span class="dropdown-menu__img"></span>
+														<span class="dropdown-menu__text">
+															<span class="dropdown-menu__brand">{{subMenu[i].name}}</span>
+															<span class="dropdown-menu__product-count">{{subMenu[i].count}}</span>
+														</span>
+													</a>
+												</div>
+											</div>
+										{% endif %}
+
+
+									{% endfor %}
+								</div>
+							</div>
+
+							<a href="" class="dropdown-menu__show-more icon-chevron-right">
+								Показать все
+							</a>
+						</div>
+					</div>
+				</li>
+			{% endif %}
+
+		{% endfor %}
+	</ul>
+
+</nav>
+<!-- end main-nav -->

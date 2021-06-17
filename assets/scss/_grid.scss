@@ -1,0 +1,30 @@
+.container {
+  margin: 0 auto;
+  max-width: $containerWidth;
+
+  @media (min-width: $mob-xs) {
+    padding: 0 #{$gutter - 5px};
+  }
+
+  @media (min-width: $desk-w) {
+    padding: 0 $gutter;
+  }
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-header {
+  flex-grow: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.page-footer {
+  flex-grow: 0;
+}

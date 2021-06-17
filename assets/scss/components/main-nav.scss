@@ -1,0 +1,143 @@
+.main-nav {
+  width: 56%;
+  flex-shrink: 0;
+}
+
+.main-nav-list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    & > a {
+      position: relative;
+      padding-bottom: 36px;
+      font-size: 18px;
+      line-height: 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      white-space: nowrap;
+      z-index: 1021;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color: $blue;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s, transform 0.3s ease;
+      }
+    }
+
+    &.active {
+      & > a {
+        color: $blue;
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &.stock-item {
+      & > a {
+        padding-right: 16px;
+        &:after {
+          top: 7px;
+          left: auto;
+          right: 0;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          opacity: 1;
+          transform: none;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  padding: 0 25px;
+  box-shadow: none;
+  .container {
+    //padding: 0;
+  }
+
+  &__item {
+    &:nth-child(4n) {
+      .dropdown-menu__link {
+        border-right: none;
+      }
+    }
+  }
+
+  &__item-inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 100%;
+    border-bottom: 1px solid $mediumGray;
+  }
+
+  &__link {
+    border-right: 1px solid $mediumGray;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    span {
+      display: block;
+    }
+
+    &:hover {
+      .dropdown-menu__img {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  &__img {
+    margin-right: 30px;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__brand {
+    margin-bottom: 5px;
+  }
+
+  &__product-count {
+    color: $darkGray;
+  }
+
+  &__show-more {
+    position: relative;
+    margin: 40px 0;
+    padding-right: 15px;
+    display: inline-block;
+    font-family: $mainFont !important;
+    &:before {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      font-size: 10px;
+      font-family: "icomoon" !important;
+    }
+  }
+}

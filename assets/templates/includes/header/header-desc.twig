@@ -1,0 +1,90 @@
+<div class="page-header__desc">
+	<div class="page-header__top-bar uk-visible@m">
+		<div class="top-panel-nav">
+			<ul class="nav-list">
+				<li>
+					<a href="#">О компании</a>
+				</li>
+				<li class="nav-list__parent">
+					<a href="#">Услуги</a>
+					<ul class="nav-list-dropdown">
+						<li class="nav-list__parent">
+							<a href="#">Сервисные службы
+								<i class="icon-chevron-right"></i>
+							</a>
+							<ul class="nav-list-dropdown">
+								<li class="nav-list__parent">
+									<a href="#">Сервисные службы
+										<i class="icon-chevron-right"></i>
+									</a>
+									<ul class="nav-list-dropdown">
+										<li>
+											<a href="#">Сервисные службы
+											</a>
+										</li>
+										<li>
+											<a href="#">Lorem-3</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Lorem-2</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								Дополнительные услуги
+								<i class="icon-chevron-right"></i>
+							</a>
+							<ul class="nav-list-dropdown">
+								<li>
+									<a href="#">Lorem-1</a>
+								</li>
+								<li>
+									<a href="#">Lorem-2</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Для дилеров</a>
+				</li>
+				<li>
+					<a href="#">Магазины</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+
+			<div class="top-panel-search">
+				<a href="#search-modal" class="top-panel-search__btn icon-search" uk-toggle>Поиск</a>
+			</div>
+
+			<div class="toolbar">
+				<div class="favorite">
+					<a href="">
+						<span class="text">Избранное</span>
+						<span class="count">2</span>
+					</a>
+				</div>
+				<div class="auth">
+					<a href="" class="icon-user">
+						<span class="auth__status">Войти</span>
+					</a>
+				</div>
+				<div class="basket">
+					<a href="" class="icon-cart">
+						<span class="basket__amount">1 035 679 Р.</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-header__bottom-bar">
+		{% include "../components/logo.twig" %}
+		{% include "../components/main-nav.twig" %}
+	</div>
+</div>

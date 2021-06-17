@@ -1,0 +1,48 @@
+html,
+body {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $mainFont;
+  color: $black;
+}
+
+body {
+  &.menu-open {
+    .page-wrapper {
+      position: relative;
+      z-index: 999;
+      &:after {
+        opacity: 1;
+        z-index: 900;
+      }
+    }
+    .page-header {
+      position: relative;
+      z-index: 999;
+    }
+  }
+}
+
+.page-wrapper {
+  position: relative;
+  z-index: 999;
+  &:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
