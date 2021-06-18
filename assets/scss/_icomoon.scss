@@ -1,11 +1,11 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot?xkanqy");
-  src: url("../fonts/icomoon/icomoon.eot?xkanqy#iefix")
+  src: url("../fonts/icomoon/icomoon.eot?okl48f");
+  src: url("../fonts/icomoon/icomoon.eot?okl48f#iefix")
       format("embedded-opentype"),
-    url("../fonts/icomoon/icomoon.ttf?xkanqy") format("truetype"),
-    url("../fonts/icomoon/icomoon.woff?xkanqy") format("woff"),
-    url("../fonts/icomoon/icomoon.svg?xkanqy#icomoon") format("svg");
+    url("../fonts/icomoon/icomoon.ttf?okl48f") format("truetype"),
+    url("../fonts/icomoon/icomoon.woff?okl48f") format("woff"),
+    url("../fonts/icomoon/icomoon.svg?okl48f#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,51 +30,48 @@
 .icon-burger:before {
   content: "\e900";
 }
-
 .icon-cart:before {
   content: "\e901";
 }
-
 .icon-chevron-down:before {
   content: "\e902";
 }
-
 .icon-chevron-right:before {
   content: "\e903";
 }
-
 .icon-envelope:before {
   content: "\e904";
+  color: #828282;
 }
-
 .icon-fav:before {
   content: "\e905";
 }
-
 .icon-fb:before {
   content: "\e906";
+  color: #fff;
 }
-
 .icon-Insta:before {
   content: "\e907";
+  color: #fff;
 }
-
 .icon-ok:before {
   content: "\e908";
+  color: #fff;
 }
-
 .icon-search:before {
   content: "\e909";
 }
-
 .icon-tg:before {
   content: "\e90a";
+  color: #fff;
 }
-
 .icon-user:before {
   content: "\e90b";
 }
-
 .icon-vk:before {
   content: "\e90c";
+  color: #fff;
+}
+.icon-close:before {
+  content: "\e90d";
 }

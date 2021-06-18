@@ -1,1 +1,98 @@
-<div class="page-header__mob uk-hidden@l">555</div>
+{% set menu = ["Каталог", "Акции", "Входные двери", "Межкомнатные двери", "Фурнитура"] %}
+{% set subMenu = [
+  {name:"Фабрика ЗИОН"},
+  {name:"Фабрика ГРИФФОН"},
+  {name:"Фабрика МАСТЕРСТАЛЬ"},
+  {name:"Фабрика  Промет"},
+  {name:"Фабрика ТРЕЙД-МАРК"},
+  {name:"Комплектующие к мет.дверям"},
+  {name:"Панели ждя мет.дверей"},
+  {name:"Фурнитура"}
+] %}
+
+
+<!-- begin page-header-mobile -->
+<div class="page-header-mobile uk-hidden@m">
+	<div class="container">
+		<div class="page-header-mobile__inner">
+			<div class="uk-grid">
+				<div class="uk-width-1-2">
+					{% include "../components/logo.twig" %}
+				</div>
+				<div class="uk-width-1-2">
+					{% include "../components/mobile-nav.twig" %}
+				</div>
+				<div
+					class="uk-width-1-1">
+					<!-- begin mobile-search-form -->
+					<div class="mobile-search-form-wrapper uk-hidden@l">
+						<form action="" class="mobile-search-form">
+							<input type="text">
+							<button type="submit" class="mobile-search-btn icon-search"></button>
+						</form>
+					</div>
+					<!-- mobile-search-form-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end page-header-mobile -->
+
+
+<!-- begin offcanvas-menu -->
+<div id="offcanvas-menu" class="offcanvas-menu" uk-offcanvas>
+	<div class="uk-offcanvas-bar">
+		<div class="uk-panel">
+			<div class="uk-panel__top">
+				{% include "../components/short-info.twig" %}
+			</div>
+
+
+			<ul class="mobile-nav-list uk-nav">
+				{% for i in 0..4 %}
+					{% if i == 1 %}
+						<li class="mobile-nav-list__item">
+							<a href="#" class="mobile-nav-list__link stock-item">{{menu[i]}}</a>
+						</li>
+					{% else %}
+						<li class="mobile-nav-list__item">
+							<a href="#" class="mobile-nav-list__link">{{menu[i]}}
+								<i class="icon-chevron-right js__mobile-sublist-toggle"></i>
+							</a>
+							<ul class="mobile-sublist">
+								{% for i in 0..7 %}
+									<li class="mobile-sublist__item">
+										<a href="" class="mobile-sublist__link">{{subMenu[i].name}}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endif %}
+				{% endfor %}
+
+			</ul>
+
+			<div class="uk-panel__bottom">
+				<ul class="uk-nav">
+					<li>
+						<a href="#">О компании</a>
+					</li>
+					<li>
+						<a href="#">Услуги</a>
+					</li>
+					<li>
+						<a href="#">Для дилеров</a>
+					</li>
+					<li>
+						<a href="#">Магазины</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end offcanvas-menu -->

@@ -18,4 +18,23 @@ $(function () {
   $(".main-nav-list__item").on("mouseleave", function () {
     $(this).removeClass("active");
   });
+
+  /**
+   * Mobile nav
+   */
+
+  $(".js__mobile-sublist-toggle").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("open").parent("a").siblings("ul").slideToggle("350");
+  });
+
+  /**
+   * Mobile search form
+   */
+  var $mobileForm = $(".mobile-search-form");
+
+  $(".js__toggle-mobile-search").on("click", function (e) {
+    e.preventDefault();
+    $mobileForm.slideToggle("350").find("input").focus();
+  });
 });

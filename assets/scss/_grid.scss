@@ -28,3 +28,21 @@
 .page-footer {
   flex-grow: 0;
 }
+
+.uk-grid {
+  @media (min-width: $mob-xs) {
+    margin-left: -15px;
+  }
+
+  @media (min-width: $desk-w) {
+    margin-left: -20px;
+  }
+
+  & > * {
+    padding-left: 15px;
+
+    @media (min-width: $desk-w) {
+      padding-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.mobile-nav {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+
+  li {
+    margin-left: 10px;
+    line-height: 30px;
+
+    @media (min-width: $mob-s) {
+      margin-left: 15px;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 2px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &.icon-burger {
+      font-size: 18px;
+
+      &:focus {
+        color: $black;
+      }
+
+      &[aria-expanded="true"] {
+        &:before {
+          content: "\e90d";
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.basket-mobile {
+  position: relative;
+
+  a {
+    font-family: $mainFont !important;
+
+    &:before {
+      font-family: "icomoon" !important;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 50%;
+  }
+}

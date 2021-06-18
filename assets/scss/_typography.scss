@@ -79,6 +79,12 @@ a {
     color: $blue;
     text-decoration: none;
   }
+
+  &.blue-link {
+    color: $blue;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 ul:not([class]) {

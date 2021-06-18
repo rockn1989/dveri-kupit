@@ -1,0 +1,53 @@
+.offcanvas-menu {
+  top: 72px;
+  width: 320px;
+  @media (min-width: $mob-s) {
+    top: 97px;
+  }
+
+  .short-info {
+    a.geo__link,
+    a.big-number {
+      color: $black;
+    }
+  }
+}
+
+.uk-offcanvas-bar {
+  padding-top: 0;
+  width: 320px;
+  background-color: $white;
+  .uk-panel__top {
+    border-top: 1px solid $black;
+    margin-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  .uk-panel__bottom {
+    margin-top: 30px;
+    padding-top: 40px;
+    border-top: 1px solid $mediumGray;
+    ul {
+      column-count: 2;
+
+      li {
+        margin-bottom: 20px;
+        line-height: 0;
+      }
+
+      a {
+        font-size: 14px;
+        line-height: 16px;
+        color: $black;
+      }
+    }
+  }
+
+  .uk-nav {
+    a {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

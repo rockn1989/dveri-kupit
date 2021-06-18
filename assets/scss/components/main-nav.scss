@@ -1,6 +1,11 @@
 .main-nav {
-  width: 56%;
   flex-shrink: 0;
+  @media (min-width: $tablet-w) {
+    width: 78%;
+  }
+  @media (min-width: $desk-w) {
+    width: 56%;
+  }
 }
 
 .main-nav-list {
@@ -66,9 +71,6 @@
 .dropdown-menu {
   padding: 0 25px;
   box-shadow: none;
-  .container {
-    //padding: 0;
-  }
 
   &__item {
     &:nth-child(4n) {

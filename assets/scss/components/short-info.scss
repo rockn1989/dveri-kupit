@@ -1,0 +1,52 @@
+.short-info-wrapper {
+  margin-left: auto;
+  padding-top: 15px;
+
+  .short-info {
+    flex-wrap: wrap;
+  }
+}
+
+.short-info {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  &__links {
+    display: inline-block;
+    margin-left: 14px;
+    line-height: 0;
+    text-align: right;
+  }
+}
+
+.geo {
+  padding-top: 3px;
+  flex-shrink: 0;
+  line-height: 0;
+  flex-grow: 1;
+  display: block;
+  text-align: right;
+  &__link {
+    position: relative;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: $mainFont !important;
+
+    &:before {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      font-family: "icomoon" !important;
+      font-size: 6px;
+    }
+  }
+}
+
+.big-number {
+  margin-bottom: 5px;
+  display: block;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 500;
+}
