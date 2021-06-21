@@ -42,4 +42,24 @@ $(function () {
     e.preventDefault();
     $mobileForm.slideToggle("350").find("input").focus();
   });
+
+  /*______ Lazy Load ______*/
+
+  $(".lazy").lazy({
+    scrollDirection: "vertical",
+    effect: "fadeIn",
+    effectTime: 1000,
+    threshold: 0,
+    visibleOnly: true,
+    placeholder: "../img/ajax-loader.gif",
+    onError: function (element) {
+      console.log("error loading " + element.data("src"));
+    },
+  });
+
+  /**
+   * Svg4everybody
+   */
+
+  svg4everybody();
 });

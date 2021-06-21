@@ -1,0 +1,19 @@
+.btn {
+  padding: 14px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background-color: $blue;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    color: $white;
+    background-color: $lightBlue;
+  }
+}

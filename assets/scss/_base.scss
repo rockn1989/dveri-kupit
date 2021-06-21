@@ -48,3 +48,8 @@ body {
 *:before {
   box-sizing: border-box;
 }
+
+*.lazy {
+  background-repeat: no-repeat;
+  background-position: center;
+}
