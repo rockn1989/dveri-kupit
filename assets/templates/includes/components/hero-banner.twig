@@ -1,0 +1,53 @@
+<!-- begin section-hero-slider -->
+<section class="section-hero-slider">
+	<div class="container">
+		<div class="hero-slider">
+			<div class="slider">
+				{% for item in 1..3 %}
+					<div class="slide">
+						<div class="uk-grid uk-grid-collapse">
+							<div class="uk-width-1-2@m">
+								<div class="slide__desc uk-text-center">
+									<div class="slide__title title-h1">Новая коллекция дверей
+										{{item}}</div>
+									<div class="slide__text">Новая коллекция дверей от фабрики Fortezza</div>
+									<a href="" class="btn">Узнать больше</a>
+								</div>
+							</div>
+							<div class="uk-width-1-2@m">
+								<a href="" class="slide__link">
+									<span class="slide__img">
+										<picture>
+											<source srcset="img/media/webp/hero-banner-img-1.webp" type="image/webp">
+											<source srcset="img/media/sliders/hero-banner-img-1.png" type="image/png">
+											<img src="img/media/sliders/hero-banner-img-1.png" width="690" height="550" alt="Новая коллекция" loading="lazy">
+										</picture>
+									</span>
+									<span class="slide__short-text">
+										<span class="slide__product-name">Дверь «Неаполь»</span>
+										<span class="slide__product-price">от 3 749 Р.</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="hero-slider__arrows">
+				<div class="slide-prev">
+					<svg width="58px" height="14px" class="icon-arrow-left">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#arrow-left"></use>
+					</svg>
+				</div>
+				<div class="slide-next">
+					<svg width="58px" height="14px" class="icon-arrow-right">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#arrow-right"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</section>
+<!-- end section-hero-slider -->
