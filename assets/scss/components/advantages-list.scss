@@ -1,0 +1,28 @@
+.advantages-list {
+  @include list-reset;
+  line-height: 1;
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    margin-right: 22px;
+    flex-shrink: 0;
+    min-width: 60px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    color: $white;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    color: $darkGray;
+  }
+}
