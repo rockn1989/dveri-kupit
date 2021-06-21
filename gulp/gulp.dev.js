@@ -13,7 +13,7 @@ import {
   change,
   eslint,
   plumber,
-  sourceMap
+  sourceMap,
 } from "./gulp.common.js";
 
 /**
@@ -127,6 +127,7 @@ export const copyFiles = () => {
         "assets/img/**",
         "assets/js/**",
         "assets/libs/**",
+        "!assets/img/webp/*.{png, jpg, gif}",
       ],
       {
         base: "./assets",
@@ -140,7 +141,7 @@ export const copyFiles = () => {
  */
 export const copyImages = () => {
   return gulp
-    .src(["assets/img/**"], {
+    .src(["assets/img/**", "!assets/img/webp/*.{png, jpg, gif}"], {
       base: "./assets",
     })
 
