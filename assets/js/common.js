@@ -25,7 +25,12 @@ $(function () {
 
   $(".js__mobile-sublist-toggle").on("click", function (e) {
     e.preventDefault();
-    $(this).toggleClass("open").parent("a").siblings("ul").slideToggle("350");
+    $(this)
+      .toggleClass("open")
+      .parent("*")
+      .siblings("ul")
+      .stop(true, true)
+      .slideToggle("350");
   });
 
   /**

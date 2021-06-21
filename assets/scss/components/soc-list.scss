@@ -1,0 +1,41 @@
+.soc-list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  &__item {
+    margin-right: 20px;
+    line-height: 1;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    color: $white;
+    font-size: 20px;
+    line-height: 20px;
+    &:hover {
+      color: $blue;
+    }
+
+    &.icon-vk {
+      font-size: 14px;
+    }
+
+    &.icon-fb {
+      font-size: 23px;
+    }
+
+    &.icon-ok {
+      font-size: 25px;
+    }
+
+    &.icon-tg {
+      font-size: 18px;
+    }
+  }
+}
