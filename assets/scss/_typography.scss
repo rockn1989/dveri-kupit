@@ -27,7 +27,7 @@ h1,
 h2,
 .title-h2 {
   margin-bottom: 20px;
-
+  font-weight: 700;
   @media (min-width: $mob-xs) {
     font-size: calc(24px + (30 - 24) * ((100vw - #{$mob-xs}) / (1200 - 320)));
 

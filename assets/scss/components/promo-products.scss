@@ -1,4 +1,8 @@
 .promo-products {
+  margin-bottom: 40px;
+  @media (min-width: $tablet-w) {
+    margin-bottom: 60px;
+  }
   &__item {
     position: relative;
     margin-bottom: 15px !important;

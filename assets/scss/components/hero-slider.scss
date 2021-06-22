@@ -142,7 +142,6 @@
   }
 
   .slick-dots {
-    display: inline-flex;
     left: 20px;
     bottom: 0;
     width: auto;
@@ -164,6 +163,7 @@
 }
 
 .slick-dots {
+  display: inline-flex;
   li {
     margin-right: 10px;
     padding: 0;

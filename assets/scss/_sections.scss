@@ -2,3 +2,28 @@
   padding: 40px 0;
   background-color: $black;
 }
+
+.section-stock {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-w) {
+    margin-bottom: 80px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet-w) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__inner {
+    padding-bottom: 80px;
+    border-bottom: 1px solid $black;
+
+    @media (min-width: $tablet-w) {
+      padding-bottom: 80px;
+    }
+  }
+}
