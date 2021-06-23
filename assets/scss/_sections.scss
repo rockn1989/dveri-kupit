@@ -21,9 +21,25 @@
   &__inner {
     padding-bottom: 80px;
     border-bottom: 1px solid $black;
+  }
+}
+
+.section-news {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-w) {
+    margin-bottom: 80px;
+  }
+
+  &__inner {
+    border-bottom: 1px solid $black;
+  }
+
+  .title-h2 {
+    margin-bottom: 40px;
 
     @media (min-width: $tablet-w) {
-      padding-bottom: 80px;
+      margin-bottom: 80px;
     }
   }
 }
