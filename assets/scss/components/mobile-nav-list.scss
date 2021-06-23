@@ -10,7 +10,7 @@
   &__link {
     position: relative;
     padding-right: 25px;
-    padding-bottom: 8px !important;
+    padding-bottom: 4px !important;
     color: $black !important;
     font-size: 18px;
     line-height: 20px;
@@ -86,5 +86,10 @@
 .uk-nav {
   .mobile-sublist {
     margin-top: 20px;
+  }
+  & > li {
+    & > a {
+      padding: 0;
+    }
   }
 }

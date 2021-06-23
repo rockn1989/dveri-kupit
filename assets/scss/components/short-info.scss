@@ -32,7 +32,12 @@
     font-size: 14px;
     line-height: 16px;
     font-family: $mainFont !important;
-
+    max-width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
     &:before {
       position: absolute;
       top: 1px;
