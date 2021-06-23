@@ -1,0 +1,57 @@
+.reviews-slider {
+  .slider {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+    height: 333px;
+    overflow: hidden;
+
+    &.slick-initialized {
+      height: auto;
+      overflow: visible;
+    }
+
+    @media (min-width: $tablet-w) {
+      padding-bottom: 80px;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slide {
+    height: auto;
+
+    @media (min-width: 768px) {
+      max-width: 555px;
+      margin: 0 10px;
+    }
+
+    @media (min-width: $tablet-w) {
+      margin: 0 10px;
+    }
+
+    .review {
+      height: 100%;
+    }
+  }
+
+  .slick-dots {
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    width: auto;
+
+    li {
+      &.slick-active {
+        button {
+          background-color: $black;
+        }
+      }
+    }
+
+    button {
+      background-color: $darkGray;
+    }
+  }
+}

@@ -88,3 +88,20 @@
     color: $darkGray;
   }
 }
+
+.section-reviews {
+  padding: 40px 0;
+  background-color: $gray;
+
+  @media (min-width: $tablet-w) {
+    padding: 80px 0;
+  }
+
+  .title-h2 {
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet-w) {
+      margin-bottom: 80px;
+    }
+  }
+}

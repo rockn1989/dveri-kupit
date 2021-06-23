@@ -72,4 +72,36 @@ $(function () {
       },
     ],
   });
+
+  /**
+   * Reviews slider
+   */
+  const $reviewsSlider = $(".reviews-slider .slider");
+
+  $reviewsSlider.slick({
+    infinite: false,
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+    fade: false,
+    cssEase: "linear",
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 959,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false,
+        },
+      },
+    ],
+  });
 });
