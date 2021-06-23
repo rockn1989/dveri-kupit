@@ -43,3 +43,48 @@
     }
   }
 }
+
+.about-company {
+  padding-bottom: 20px;
+  .title-h2 {
+    margin-bottom: 20px !important;
+  }
+
+  &__text {
+    @media (min-width: $mob-s) {
+      padding-left: 13%;
+
+      border-left: 1px solid $mediumGray;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    margin-top: 80px;
+    padding: 45px 0 25px;
+    border-top: 1px solid $mediumGray;
+  }
+
+  &__item {
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-img {
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  &__item-title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 16px;
+    color: $darkGray;
+  }
+}
