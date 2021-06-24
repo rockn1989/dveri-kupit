@@ -94,6 +94,21 @@ a {
       color: $white;
     }
   }
+
+  &.show-more {
+    position: relative;
+    margin: 40px 0;
+    padding-right: 15px;
+    display: inline-block;
+    font-family: $mainFont !important;
+    &:before {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      font-size: 10px;
+      font-family: "icomoon" !important;
+    }
+  }
 }
 
 ul:not([class]) {
