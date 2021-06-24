@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?k1kjg5');
-  src:  url('fonts/icomoon.eot?k1kjg5#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?k1kjg5') format('truetype'),
-    url('fonts/icomoon.woff?k1kjg5') format('woff'),
-    url('fonts/icomoon.svg?k1kjg5#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?z6sb3h');
+  src:  url('fonts/icomoon.eot?z6sb3h#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?z6sb3h') format('truetype'),
+    url('fonts/icomoon.woff?z6sb3h') format('woff'),
+    url('fonts/icomoon.svg?z6sb3h#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -48,7 +48,7 @@
   content: "\e906";
   color: #fff;
 }
-.icon-Insta:before {
+.icon-insta:before {
   content: "\e907";
   color: #fff;
 }
