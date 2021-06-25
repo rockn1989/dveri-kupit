@@ -1,4 +1,88 @@
 {% extends "../layouts/main.twig" %}
 {% set title = "Каталог" %}
 {% set bread = ['Главная', 'Каталог'] %}
-{% block content %}{% endblock %}
+{% block content %}
+	<!-- begin catalog-main -->
+	<section class="catalog-main">
+		<div class="container">
+			<div class="catalog-main__list-wrapper">
+				<ul class="catalog-main__list uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l" uk-grid>
+					<li class="catalog-main__item-wrapper">
+						<div class="catalog-main__item">
+							<div class="catalog-main__item-img">
+								<figure>
+									<picture>
+										<source srcset="img/media/webp/catalog-main-img-1.webp" type="image/webp">
+										<source srcset="img/media/catalog/catalog-main-img-1.png" type="image/png">
+										<img src="img/media/catalog/catalog-main-img-1.png" width="325" height="252" alt="" loading="lazy">
+									</picture>
+								</figure>
+							</div>
+							<div class="catalog-main__item-desc">
+								<a href="" class="catalog-main__item-title">входные двери</a>
+								<div class="catalog-main__item-count">145 товаров</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="catalog-main__item-wrapper">
+						<div class="catalog-main__item">
+							<div class="catalog-main__item-img">
+								<figure>
+									<picture>
+										<source srcset="img/media/webp/catalog-main-img-2.webp" type="image/webp">
+										<source srcset="img/media/catalog/catalog-main-img-2.png" type="image/png">
+										<img src="img/media/catalog/catalog-main-img-2.png" width="325" height="252" alt="" loading="lazy">
+									</picture>
+								</figure>
+							</div>
+							<div class="catalog-main__item-desc">
+								<a href="" class="catalog-main__item-title">Межкомнатные двери</a>
+								<div class="catalog-main__item-count">206 товаров</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="catalog-main__item-wrapper">
+						<div class="catalog-main__item">
+							<div class="catalog-main__item-img">
+								<figure>
+									<picture>
+										<source srcset="img/media/webp/catalog-main-img-3.webp" type="image/webp">
+										<source srcset="img/media/catalog/catalog-main-img-3.png" type="image/png">
+										<img src="img/media/catalog/catalog-main-img-3.png" width="325" height="252" alt="" loading="lazy">
+									</picture>
+								</figure>
+							</div>
+							<div class="catalog-main__item-desc">
+								<a href="" class="catalog-main__item-title">комлектующие к дверям</a>
+								<div class="catalog-main__item-count">1 189 товаров</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="catalog-main__item-wrapper">
+						<div class="catalog-main__item">
+							<div class="catalog-main__item-img">
+								<figure>
+									<picture>
+										<source srcset="img/media/webp/catalog-main-img-4.webp" type="image/webp">
+										<source srcset="img/media/catalog/catalog-main-img-4.png" type="image/png">
+										<img src="img/media/catalog/catalog-main-img-4.png" width="325" height="252" alt="" loading="lazy">
+									</picture>
+								</figure>
+							</div>
+							<div class="catalog-main__item-desc">
+								<a href="" class="catalog-main__item-title">фурнитура</a>
+								<div class="catalog-main__item-count">4 578 товаров</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<a href="" class="show-more icon-chevron-right">Показать все</a>
+			</div>
+		</div>
+	</section>
+	<!-- end catalog-main -->
+{% endblock %}
