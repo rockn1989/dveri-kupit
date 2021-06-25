@@ -1,0 +1,7 @@
+.catalog-main {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-w) {
+    margin-bottom: 40px;
+  }
+}

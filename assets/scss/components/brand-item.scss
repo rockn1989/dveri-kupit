@@ -1,0 +1,48 @@
+.brand-item {
+  height: 100%;
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+  }
+
+  &__img {
+    margin-right: 20px;
+    flex-shrink: 0;
+    flex-basis: 125px;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__desc {
+    max-width: 220px;
+    line-height: 1;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+  }
+
+  &__count {
+    font-size: 16px;
+    line-height: 18px;
+    color: $darkGray;
+  }
+}
