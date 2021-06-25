@@ -3,8 +3,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" href="libs/uikit3/css/uikit.min.css">
-	<link rel="stylesheet" href="libs/slick/slick-theme.css">
-	<link rel="stylesheet" href="libs/slick/slick.css">
+
+	<link rel="preload" href="fonts/suisseIntl/SuisseIntl-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/suisseIntl/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/suisseIntl/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+	<link rel="preload" href="libs/slick/fonts/slick.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="fonts/icomoon/icomoon.woff?z6sb3h" as="font" type="font/woff" crossorigin>
+
+	<link rel="stylesheet" href="libs/uikit3/css/uikit.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="libs/slick/slick.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="css/style.css">
 </head>
