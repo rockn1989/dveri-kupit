@@ -1,11 +1,19 @@
 .seo-tags {
   @include list-reset;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  padding: 5px 0;
+  overflow-x: auto;
+
+  @media (min-width: $tablet-w) {
+    flex-wrap: wrap;
+    overflow: unset;
+    padding: 0;
+  }
 
   &__item {
     margin: 0 10px 10px 0;
-
+    white-space: nowrap;
     &:last-child {
       margin-right: 0;
     }

@@ -1,17 +1,13 @@
 .card {
-  width: 246px;
   transition: transform 0.3s ease;
-
-  @media (min-width: $tablet-w) {
-    width: 325px;
-  }
 
   &__header {
     position: relative;
     margin-bottom: 20px;
+    padding: 0 20px 20px;
     background-color: $gray;
 
-    a {
+    & > a {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,6 +27,8 @@
 
     .add-favorite {
       right: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
   }
 
@@ -38,6 +36,20 @@
     img {
       transition: transform 0.3s ease;
       will-change: transform;
+    }
+  }
+
+  &__settings {
+    @include list-reset;
+    font-size: 14px;
+    line-height: 18px;
+    color: $darkGray;
+    li {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -85,6 +97,30 @@
     img {
       transform: scale(1.15);
     }
+
+    .colors-list {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .add-favorite {
+      opacity: 1;
+    }
+  }
+
+  .colors-list {
+    position: absolute;
+    top: 85px;
+    right: 25px;
+    transform: translateX(10px);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s ease;
+    & > * {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -120,5 +156,49 @@
     height: 30px;
     font-size: 30px;
     color: #000000;
+  }
+}
+
+.color-checkbox {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked {
+      ~ span {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  span {
+    position: relative;
+    margin-bottom: 8px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    &:after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      display: block;
+      border-radius: 50%;
+      border: 1px solid $mediumGray;
+      display: none;
+    }
   }
 }

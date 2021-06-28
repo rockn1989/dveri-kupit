@@ -1,12 +1,29 @@
 .catalog {
-  &__header {
-    padding-bottom: 30px;
-    border-bottom: 1px solid $mediumGray;
+  &-header {
+    /*     padding-bottom: 30px;
+    border-bottom: 1px solid $mediumGray; */
 
     p {
       @media (min-width: $tablet-w) {
         max-width: 80%;
       }
     }
+  }
+}
+
+.catalog-body {
+  &__list {
+    border-bottom: 1px solid $mediumGray;
+  }
+
+  &__item {
+    margin-bottom: 50px !important;
+  }
+}
+
+.catalog-bar {
+  padding: 40px 0;
+  &.border-bottom {
+    border-bottom: 1px solid $mediumGray;
   }
 }

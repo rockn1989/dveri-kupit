@@ -19,6 +19,11 @@
 
   .slide {
     margin: 0 10px;
+
+    width: 246px;
+    @media (min-width: $tablet-w) {
+      width: 325px;
+    }
   }
 
   .btn-slide {

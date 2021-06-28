@@ -1,6 +1,18 @@
 {% extends "../layouts/main.twig" %}
-{% set title = "Каталог" %}
+{% set title = "Ульяновские межкомнатные двери" %}
 {% set bread = ['Главная', 'Каталог', 'Ульяновские межкомнатные двери'] %}
+{% set colors = [
+  '#D7D7D7',
+  '#888279',
+  '#3C2821',
+  '#83888C',
+  '#833435',
+  '#ffffff',
+  '#35261D',
+  '#804423',
+  '#804423',
+  '#804423',
+] %}
 
 {% block content %}
 
@@ -8,14 +20,84 @@
 	<!-- begin catalog -->
 	<section class="catalog">
 		<div class="container">
-			<div class="catalog__header">
+			<div class="catalog-header">
 				<h1>Ульяновские межкомнатные двери</h1>
 				<p>
 					Интернет-магазин «Двери Регионов» предлагает качественные и недорогие межкомнатные двери от производителя с доставкой по Москве и Московской области.
 				</p>
 
 				{% include "../includes/components/seo-tags.twig" %}
+				{% include "../includes/components/filter.twig" %}
+				{% include "../includes/components/sort-panel.twig" %}
 			</div>
+
+			<section class="catalog-body">
+				<div class="catalog-body__list">
+					<div class="uk-grid">
+						{% for i in 1..12 %}
+							<div class="uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
+								<div class="catalog-body__item">
+									<div class="card">
+										<div class="card__inner">
+											<div class="card__header">
+												<a href="">
+													<picture class="card__img">
+														<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+														<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+														<img src="img/media/sliders/product-slide-1.png" alt="" loading="lazy">
+													</picture>
+												</a>
+
+												<div class="stocks"></div>
+												<div class="add-favorite">
+													<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+													<a href="" class="icon-fav-fill uk-hidden"></a>
+												</div>
+
+												<div class="colors-list">
+													{% for i in 0..9 %}
+														<label for="{{i}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
+															<input id="{{i}}" type="checkbox" value="">
+															<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+														</label>
+													{% endfor %}
+													<a href="" class="round-plus icon-plus" uk-tooltip="title: Более 20 цветов; pos: right"></a>
+												</div>
+
+												<ul class="card__settings">
+													<li>Стандарт</li>
+													<li>Со сменными панелями</li>
+													<li>Взломостойкая</li>
+												</ul>
+											</div>
+
+											<div class="card__body">
+												<div class="card__title">
+													<a href="">Uno Art Line</a>
+												</div>
+												<div class="card__desc">
+													<div class="card__price">
+														<div class="card__price-old">от 9 870 Р.</div>
+														<div class="card__price-current">от 6 870 Р.</div>
+													</div>
+													<div class="card__stocks">Скидка 50%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="catalog-bar border-bottom uk-text-center">
+					<a href="#" class="show-more-item icon-repeat">Показать еще</a>
+				</div>
+
+				<div class="catalog-bar">
+					{% include "../includes/components/pagination.twig" %}
+				</div>
+			</section>
 		</div>
 	</section>
 	<!-- end catalog -->

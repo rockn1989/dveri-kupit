@@ -1,6 +1,8 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.woff?z6sb3h") format("woff");
+
+  src: url("../fonts/icomoon/icomoon.woff?qdpe7g") format("woff");
+
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,7 +38,6 @@
 }
 .icon-envelope:before {
   content: "\e904";
-  color: #828282;
 }
 .icon-fav:before {
   content: "\e905";
@@ -67,4 +68,10 @@
 }
 .icon-fav-fill:before {
   content: "\e90e";
+}
+.icon-repeat:before {
+  content: "\e90f";
+}
+.icon-plus:before {
+  content: "\e910";
 }
