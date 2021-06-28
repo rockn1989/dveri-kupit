@@ -24,6 +24,10 @@
     @media (min-width: $tablet-w) {
       width: 325px;
     }
+
+    .card__settings {
+      display: none;
+    }
   }
 
   .btn-slide {
