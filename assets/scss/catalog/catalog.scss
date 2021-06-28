@@ -1,0 +1,12 @@
+.catalog {
+  &__header {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $mediumGray;
+
+    p {
+      @media (min-width: $tablet-w) {
+        max-width: 80%;
+      }
+    }
+  }
+}

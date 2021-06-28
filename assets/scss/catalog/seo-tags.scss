@@ -1,0 +1,35 @@
+.seo-tags {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 0 10px 10px 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      .seo-tags__link {
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+
+  &__link {
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 18px;
+    color: $black;
+    border-radius: 20px;
+    border: 1px solid $black;
+    transition: background-color 0.3s, color 0.3s ease;
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Каталог" %}
+{% set bread = ['Главная', 'Каталог', 'Ульяновские межкомнатные двери'] %}
+
+{% block content %}
+
+
+	<!-- begin catalog -->
+	<section class="catalog">
+		<div class="container">
+			<div class="catalog__header">
+				<h1>Ульяновские межкомнатные двери</h1>
+				<p>
+					Интернет-магазин «Двери Регионов» предлагает качественные и недорогие межкомнатные двери от производителя с доставкой по Москве и Московской области.
+				</p>
+
+				{% include "../includes/components/seo-tags.twig" %}
+			</div>
+		</div>
+	</section>
+	<!-- end catalog -->
+
+
+{% endblock %}
