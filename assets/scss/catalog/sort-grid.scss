@@ -1,10 +1,11 @@
 .sort-grid {
   margin-top: 20px;
-  display: flex;
-  align-items: center;
+  display: none;
   @media (min-width: $mob-s) {
     margin-top: 0;
+    display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
   &__label {
     font-size: 16px;
@@ -17,6 +18,12 @@
     a {
       margin-left: 20px;
       display: block;
+
+      &.active {
+        svg {
+          color: $blue;
+        }
+      }
     }
   }
 }

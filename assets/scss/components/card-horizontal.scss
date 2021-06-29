@@ -1,0 +1,126 @@
+.card-horizontal {
+  margin-bottom: 20px;
+  border: 1px solid $mediumGray;
+  &__inner {
+    position: relative;
+    padding: 20px;
+
+    @media (min-width: $tablet-w) {
+      padding: 40px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: $gray;
+
+    @media (min-width: $tablet-w) {
+      padding: 0;
+      background-color: #ffffff;
+    }
+    img {
+      max-height: 300px;
+    }
+    a {
+      @media (min-width: $tablet-w) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__img-frontface {
+    @media (min-width: $mob-s) {
+      margin-right: 20px;
+    }
+  }
+
+  &__img-backface {
+    display: none;
+
+    @media (min-width: $mob-s) {
+      display: block;
+    }
+  }
+
+  &__desc {
+    display: none;
+    @media (min-width: $mob-s) {
+      margin-top: 40px;
+      display: block;
+    }
+
+    @media (min-width: $tablet-w) {
+      margin-top: 0;
+      padding: 0 20px;
+    }
+  }
+
+  &__info {
+    padding-top: 50px;
+
+    height: 100%;
+
+    .add-favorite {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+
+      @media (min-width: $tablet-w) {
+        top: 0;
+        right: 0;
+      }
+    }
+
+    @media (min-width: $tablet-w) {
+      position: relative;
+      padding-left: 40px;
+      border-left: 1px solid $mediumGray;
+    }
+  }
+
+  &__count {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__price {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__price-old {
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: line-through;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__price-current {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &__stocks {
+    margin-bottom: 15px;
+    span {
+      padding: 3px 5px;
+      display: inline-flex;
+      font-size: 11px;
+      line-height: 12px;
+      color: $white;
+      background-color: $red;
+    }
+  }
+
+  .btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}

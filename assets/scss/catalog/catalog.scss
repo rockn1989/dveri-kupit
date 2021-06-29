@@ -27,3 +27,38 @@
     border-bottom: 1px solid $mediumGray;
   }
 }
+
+.catalog-body__list {
+  &.grid-view {
+    .card-horizontal {
+      display: none;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+
+    .card {
+      margin-bottom: 50px !important;
+      padding-left: 20px;
+      width: 100%;
+      @media (min-width: $mob-s) {
+        width: 50%;
+      }
+
+      @media (min-width: $tablet-w) {
+        width: 33%;
+      }
+
+      @media (min-width: $desk-w) {
+        width: 25%;
+      }
+    }
+  }
+
+  &.list-view {
+    .card {
+      display: none;
+    }
+  }
+}
