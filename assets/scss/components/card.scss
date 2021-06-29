@@ -126,18 +126,23 @@
 
 .stocks {
   position: absolute;
-
+  font-size: 0;
   & > * {
-    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     width: 32px;
     height: 32px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     font-size: 11px;
     line-height: 12px;
     color: $white;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__hit {
