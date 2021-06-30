@@ -1,6 +1,7 @@
 {% extends "../layouts/main.twig" %}
 {% set title = "Ульяновские межкомнатные двери" %}
 {% set bread = ['Главная', 'Каталог', 'Ульяновские межкомнатные двери'] %}
+{% set gridActive = true %}
 {% set colors = [
   '#D7D7D7',
   '#888279',
@@ -32,66 +33,140 @@
 			</div>
 
 			<section class="catalog-body">
-				<div class="catalog-body__list">
-					<div class="uk-grid">
-						{% for i in 1..12 %}
-							<div class="uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
-								<div class="catalog-body__item">
-									<div class="card">
-										<div class="card__inner">
-											<div class="card__header">
-												<a href="">
-													<picture class="card__img">
-														<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
-														<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
-														<img src="img/media/sliders/product-slide-1.png" alt="" loading="lazy">
-													</picture>
-												</a>
+				<div class="catalog-body__list grid-view">
 
-												<div class="stocks">
-													<div class="stocks__sale">sale</div>
-													<div class="stocks__hit">hit</div>
-												</div>
-												<div class="add-favorite">
-													<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
-													<a href="" class="icon-fav-fill uk-hidden"></a>
-												</div>
+					{% for i in 1..12 %}
 
-												<div class="colors-list">
-													{% for i in 0..9 %}
-														<label for="{{i}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
-															<input id="{{i}}" type="checkbox" value="">
-															<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
-														</label>
-													{% endfor %}
-													<a href="" class="round-plus icon-plus" uk-tooltip="title: Более 20 цветов; pos: right"></a>
-												</div>
+						<div class="card">
+							<div class="card__inner">
+								<div class="card__header">
+									<a href="">
+										<picture class="card__img">
+											<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+											<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+											<img src="img/media/sliders/product-slide-1.png" alt="" loading="lazy">
+										</picture>
+									</a>
 
-												<ul class="card__settings">
-													<li>Стандарт</li>
-													<li>Со сменными панелями</li>
-													<li>Взломостойкая</li>
-												</ul>
+									<div class="stocks">
+										<div class="stocks__sale">sale</div>
+										<div class="stocks__hit">hit</div>
+									</div>
+									<div class="add-favorite">
+										<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+										<a href="" class="icon-fav-fill uk-hidden"></a>
+									</div>
+
+									<div class="colors-list">
+										{% for i in 0..9 %}
+											<label for="{{i}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
+												<input id="{{i}}" type="checkbox" value="">
+												<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+											</label>
+										{% endfor %}
+										<a href="" class="round-plus icon-plus" uk-tooltip="title: Более 20 цветов; pos: right"></a>
+									</div>
+
+									<ul class="card__settings">
+										<li>Стандарт</li>
+										<li>Со сменными панелями</li>
+										<li>Взломостойкая</li>
+									</ul>
+								</div>
+
+								<div class="card__body">
+									<div class="card__title">
+										<a href="">Uno Art Line</a>
+									</div>
+									<div class="card__desc">
+										<div class="card__price">
+											<div class="card__price-old">от 9 870 Р.</div>
+											<div class="card__price-current">от 6 870 Р.</div>
+										</div>
+										<div class="card__stocks">Скидка 50%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-horizontal">
+							<div class="card-horizontal__inner">
+								<div class="uk-grid">
+									<div class="uk-width-1-4@m">
+										<div class="card-horizontal__img" uk-lightbox>
+											<a href="img/media/catalog/card-img-h-1.png" class="card-horizontal__img-frontface">
+												<picture>
+													<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+													<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+													<img src="img/media/sliders/product-slide-1.png.png" alt="Uno Art Line">
+												</picture>
+											</a>
+											<a href="img/media/catalog/card-img-h-2.png" class="card-horizontal__img-backface">
+												<picture>
+													<source srcset="img/media/webp/product-slide-2.webp" type="image/webp">
+													<source srcset="img/media/sliders/product-slide-2.png" type="image/png">
+													<img src="img/media/sliders/product-slide-2.png.png" alt="Uno Art Line">
+												</picture>
+											</a>
+										</div>
+									</div>
+									<div class="uk-width-expand">
+										<div class="card-horizontal__desc">
+											<div class="card-horizontal__title title-h3">Uno Art Line</div>
+											<div class="card-horizontal__table">
+												<table>
+													<tr>
+														<td>Количество контуров</td>
+														<td>3-контурная</td>
+													</tr>
+													<tr>
+														<td>Назначение</td>
+														<td>Уличная</td>
+													</tr>
+													<tr>
+														<td>Размер</td>
+														<td>2000 х 440 х 1200 мм</td>
+													</tr>
+													<tr>
+														<td>Толщина полотна</td>
+														<td>400 мм</td>
+													</tr>
+													<tr>
+														<td>Толщина листа металла</td>
+														<td>100 мм</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-1-4@m">
+										<div class="card-horizontal__info">
+
+											<div class="add-favorite">
+												<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+												<a href="" class="icon-fav-fill uk-hidden"></a>
+											</div>
+											<div class="card-horizontal__count">
+												<div class="green">Остаток на складе — 122 шт.</div>
+											</div>
+											<div class="small-title">Цена за штуку</div>
+											<div class="card-horizontal__price">
+												<div class="card-horizontal__price-old">1 290 р.</div>
+												<div class="card-horizontal__price-current">от 990 Р.</div>
 											</div>
 
-											<div class="card__body">
-												<div class="card__title">
-													<a href="">Uno Art Line</a>
-												</div>
-												<div class="card__desc">
-													<div class="card__price">
-														<div class="card__price-old">от 9 870 Р.</div>
-														<div class="card__price-current">от 6 870 Р.</div>
-													</div>
-													<div class="card__stocks">Скидка 50%</div>
-												</div>
+											<div class="card-horizontal__stocks">
+												<span>Скидка 20%</span>
 											</div>
+											<a href="" class="btn">Узнать больше</a>
+											<a href="" class="fast-buy">Купить в один клик</a>
 										</div>
 									</div>
 								</div>
 							</div>
-						{% endfor %}
-					</div>
+						</div>
+					{% endfor %}
+
 				</div>
 				<div class="catalog-bar border-bottom uk-text-center">
 					<a href="#" class="show-more-item icon-repeat">Показать еще</a>
