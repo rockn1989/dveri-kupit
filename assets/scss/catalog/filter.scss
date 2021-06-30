@@ -1,0 +1,153 @@
+.filter-form-wrapper {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid $mediumGray;
+  border-bottom: 1px solid $mediumGray;
+
+  @media (min-width: $tablet-w) {
+    padding: 40px 0;
+  }
+}
+
+.filter-form {
+  &__toggle {
+    position: relative;
+    display: inline-block;
+    padding-right: 28px;
+    font-family: $mainFont !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:before {
+      font-family: "icomoon" !important;
+      position: absolute;
+      top: 5px;
+      right: 0;
+      font-size: 9px;
+      transform-origin: center;
+    }
+
+    &.open {
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 30px;
+
+    @media (min-width: $desk-w) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .select2-container {
+    width: 100% !important;
+  }
+
+  .colors-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .color-checkbox span {
+      margin: 0 6px 6px 0;
+      width: 36px;
+      height: 36px;
+    }
+
+    .round-plus {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__body {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $desk-w) {
+      justify-content: unset;
+    }
+  }
+
+  &__section {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $mob-s) {
+      width: calc(50% - 20px);
+    }
+    @media (min-width: $desk-w) {
+      margin-bottom: 0;
+      padding: 0 40px;
+      border-right: 1px solid $mediumGray;
+    }
+    &.section-1 {
+      padding-left: 0;
+      @media (min-width: $desk-w) {
+        width: calc(35% - 40px);
+        .filter-form__title {
+          margin-bottom: 13px;
+        }
+      }
+      .checkbox-list {
+        margin-top: 40px;
+        .custom-checkbox {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.section-2 {
+      @media (min-width: $desk-w) {
+        width: calc(32% - 80px);
+        .filter-form__title {
+          margin-bottom: 13px;
+        }
+      }
+    }
+
+    &.section-3 {
+      @media (min-width: $desk-w) {
+        width: calc(13% - 80px);
+      }
+    }
+
+    &.section-4 {
+      padding-right: 0;
+      @media (min-width: $desk-w) {
+        width: calc(20% - 40px);
+      }
+      border: none;
+    }
+
+    &.section-5 {
+      margin-top: 20px;
+      padding: 0;
+      width: 100%;
+      border: none;
+    }
+  }
+
+  &__buttons {
+    font-size: 0;
+    .btn {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}

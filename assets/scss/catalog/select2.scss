@@ -1,3 +1,5 @@
+/*___ Sort-select select2 ___*/
+
 .custom-select {
   display: flex;
   align-items: center;
@@ -18,7 +20,9 @@
     color: $black;
   }
 
-  .select2-container .select2-selection--single .select2-selection__rendered {
+  .select2-container--sort-select
+    .select2-selection--single
+    .select2-selection__rendered {
     padding-left: 0;
   }
 
@@ -26,7 +30,7 @@
     display: none;
   }
 
-  .select2-container .select2-selection--single {
+  .select2-container--sort-select .select2-selection--single {
     position: relative;
     height: 32px;
   }
@@ -79,4 +83,71 @@
 
 .select2-dropdown {
   border-color: $black;
+}
+
+/*___ Default select2 ___*/
+
+.select2-container--default {
+  min-width: 120px;
+
+  .select2-selection--single {
+    height: 56px;
+    border-radius: 0;
+    border-color: $black;
+    padding-right: 26px;
+
+    .select2-selection__rendered {
+      padding-left: 16px;
+      padding-right: 0;
+      line-height: 56px;
+    }
+    .select2-selection__rendered,
+    .select2-selection__placeholder {
+      font-size: 16px;
+      line-height: 56px;
+      color: $black;
+    }
+
+    .select2-selection__arrow {
+      height: 56px;
+      right: 6px;
+      b {
+        margin: 0;
+
+        border-color: unset;
+        border-style: solid;
+        border-width: 0;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0;
+        border: none;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform-origin: center;
+        &:after {
+          content: "\e902";
+          font-family: "icomoon";
+          font-size: 8px;
+          line-height: 6px;
+          font-weight: normal;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  &.select2-container--open {
+    .select2-selection__arrow {
+      b {
+        &:after {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }

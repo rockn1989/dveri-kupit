@@ -1,3 +1,147 @@
-<!-- begin filter -->
-<div class="filter"></div>
+{% set colors = [
+  '#D7D7D7',
+  '#888279',
+  '#3C2821',
+  '#83888C',
+  '#833435',
+  '#ffffff',
+  '#35261D',
+  '#804423',
+  '#804423',
+  '#804423',
+] %}
+
+<!-- begin filter-form -->
+<div class="filter-form-wrapper">
+	<form class="filter-form">
+		<div class="filter-form__toggle open icon-chevron-down">Подбор по параметрам</div>
+
+		<div class="filter-form__body">
+
+
+			<fieldset class="filter-form__section section-1">
+				<div class="filter-form__title">Характеристики</div>
+				<div class="uk-grid">
+					<div class="uk-width-1-2">
+						<div class="small-gray-title">Бренд</div>
+						<div class="custom-select">
+							<select class="js__custom-select" data-theme="default" data-placeholder="Все">
+								<option value=""></option>
+								<option value="1">Lorem 1</option>
+								<option value="2">Lorem, ipsum dolor.</option>
+								<option value="3">Lorem 3</option>
+							</select>
+						</div>
+					</div>
+					<div class="uk-width-1-2">
+						<div class="small-gray-title">Размер</div>
+						<div class="custom-select">
+							<select class="js__custom-select" data-theme="default" data-placeholder="Все">
+								<option value=""></option>
+								<option value="5">Lorem 1</option>
+								<option value="6">Lorem 2</option>
+								<option value="7">Lorem 3</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="uk-width-1-1">
+						<div class="checkbox-list">
+							<label for="1" class="custom-checkbox">
+								<input id="1" type="checkbox" checked>
+								<span class="custom-checkbox__input"></span>
+								<span class="custom-checkbox__label">Новинки</span>
+							</label>
+
+							<label for="2" class="custom-checkbox">
+								<input id="2" type="checkbox">
+								<span class="custom-checkbox__input"></span>
+								<span class="custom-checkbox__label">Хит</span>
+							</label>
+
+							<label for="3" class="custom-checkbox">
+								<input id="3" type="checkbox">
+								<span class="custom-checkbox__input"></span>
+								<span class="custom-checkbox__label">Распродажа</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+
+			<fieldset class="filter-form__section section-2">
+				<div class="filter-form__title">Стоимость</div>
+
+				<div class="filter__price">
+					<div class="ui-slider-box">
+
+						<div class="input-box">
+							<div class="input-section">
+								<div class="small-gray-title">От</div>
+								<input type="number" id="min" class="price-input-min js__ui-slider">
+							</div>
+							<div class="separate"></div>
+							<div class="input-section">
+								<div class="small-gray-title">До</div>
+								<input type="number" id="max" class="price-input-max js__ui-slider">
+							</div>
+						</div>
+						<div class="ui-slider-wrapper">
+							<div id="ui-slider" class="ui-slider"></div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+
+			<fieldset class="filter-form__section section-3">
+				<div class="filter-form__title">Вид полотна</div>
+				<div class="checkbox-list">
+					<label for="4" class="custom-checkbox">
+						<input id="4" type="checkbox" checked>
+						<span class="custom-checkbox__input"></span>
+						<span class="custom-checkbox__label">Глухая</span>
+					</label>
+					<label for="5" class="custom-checkbox">
+						<input id="5" type="checkbox" checked>
+						<span class="custom-checkbox__input"></span>
+						<span class="custom-checkbox__label">Остекленная</span>
+					</label>
+				</div>
+			</fieldset>
+
+			<fieldset class="filter-form__section section-4">
+				<div class="filter-form__title">Отделка</div>
+				<div class="small-gray-title">Керамика Серена</div>
+				<div class="colors-list">
+					{% for i in 0..9 %}
+						{% if i == 5 %}
+							<label for="{{i}}_{{colors[i]}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
+								<input id="{{i}}_{{colors[i]}}" type="checkbox" value="" checked>
+								<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+							</label>
+						{% else %}
+							<label for="{{i}}_{{colors[i]}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
+								<input id="{{i}}_{{colors[i]}}" type="checkbox" value="">
+								<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+							</label>
+						{% endif %}
+					{% endfor %}
+					<a href="" class="round-plus icon-plus" uk-tooltip="title: Более 20 цветов; pos: right"></a>
+				</div>
+			</fieldset>
+
+
+			<fieldset class="filter-form__section section-5">
+				<div class="filter-form__buttons">
+					<button type="submit" class="btn btn--lg">Применить</button>
+					<button type="reset" class="btn btn--white">Очистить</button>
+				</div>
+			</fieldset>
+
+
+		</div>
+	</form>
+</div>
 <!-- end filter -->

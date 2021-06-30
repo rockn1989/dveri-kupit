@@ -262,6 +262,13 @@ table:not([class]) {
   line-height: 18px;
 }
 
+.small-gray-title {
+  margin-bottom: 5px;
+  color: $darkGray;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .green {
   color: $green;
 }
