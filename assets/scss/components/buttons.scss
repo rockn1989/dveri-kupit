@@ -17,4 +17,14 @@
     color: $white;
     background-color: $lightBlue;
   }
+
+  &--lg {
+    padding: 14px 68px;
+  }
+
+  &--white {
+    background-color: #ffffff;
+    border: 1px solid $mediumGray;
+    color: $blue;
+  }
 }
