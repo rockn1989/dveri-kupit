@@ -1,0 +1,86 @@
+<!-- begin detail-card-slider -->
+<div class="detail-card-slider">
+
+	<div class="detail-card-slider-hero">
+		{% for i in 1..3 %}
+			<div class="slide">
+				<div class="doors-image-wrapper" uk-lightbox>
+					<div class="uk-grid">
+						<div class="uk-width-1-2">
+							<div class="door-frontface">
+								<a href="img/media/sliders/slider-mezh-hero-1.png">
+									<picture>
+										<source srcset="img/media/webp/slider-mezh-hero-1.webp" type="image/webp">
+										<source srcset="img/media/sliders/slider-mezh-hero-1.png" type="image/png">
+										<img src="img/media/sliders/slider-mezh-hero-1.png" width="203" height="460" alt="Президент Люкс" loading="lazy">
+									</picture>
+								</a>
+							</div>
+						</div>
+						<div class="uk-width-1-2">
+							<div class="door-backface">
+								<a href="img/media/sliders/slider-mezh-hero-2.png">
+									<picture>
+										<source srcset="img/media/webp/slider-mezh-hero-2.webp" type="image/webp">
+										<source srcset="img/media/sliders/slider-mezh-hero-2.png" type="image/png">
+										<img src="img/media/sliders/slider-mezh-hero-2.png" width="203" height="460" alt="Президент Люкс" loading="lazy">
+									</picture>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="door-colors-wrapper">
+					<div class="uk-grid">
+						<div class="uk-width-1-2@s">
+							<div class="small-gray-title">Внешняя отделка</div>
+
+							<select class="js__custom-select" data-theme="default" data-placeholder="Выберете цвет" data-width="100%">
+								<option value=""></option>
+								<option value="1">Медный антик рисунок 4</option>
+								<option value="2">Красный антик рисунок 4</option>
+								<option value="3">Зеленый антик рисунок 4</option>
+							</select>
+						</div>
+						<div class="uk-width-1-2@s">
+							<div class="small-gray-title">Внутренняя отделка</div>
+
+							<select class="js__custom-select" data-theme="default" data-placeholder="Выберете цвет" data-width="100%">
+								<option value=""></option>
+								<option value="1">Темный орех А 007</option>
+								<option value="2">Серебристая</option>
+								<option value="3">Зеленый антик рисунок 4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		{% endfor %}
+	</div>
+	<div class="detail-card-slider-preview">
+
+		{% for i in 1..3 %}
+			<div class="slide">
+				<picture>
+					<source srcset="img/media/webp/slider-mezh-preview-{{i}}.webp" type="image/webp">
+					<source srcset="img/media/sliders/slider-mezh-preview-{{i}}.png" type="image/png">
+					<img src="img/media/sliders/slider-mezh-preview-{{i}}.png" width="32" height="72" alt="Президент Люкс" loading="lazy">
+				</picture>
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="stocks">
+		<div class="stocks__sale">sale</div>
+		<div class="stocks__hit">hit</div>
+	</div>
+
+	<div class="add-favorite">
+		<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+		<a href="" class="icon-fav-fill uk-hidden"></a>
+	</div>
+
+</div>
+<!-- end detail-card-slider -->

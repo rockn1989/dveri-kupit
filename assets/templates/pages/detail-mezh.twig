@@ -1,0 +1,28 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Президент X7" %}
+{% set bread = ['Главная', 'Каталог', 'Входные двери', 'Президент X7'] %}
+{% set gridActive = true %}
+{% set colors = [
+  '#D7D7D7',
+  '#888279',
+  '#3C2821',
+  '#83888C',
+  '#833435',
+  '#ffffff',
+  '#35261D',
+  '#804423',
+  '#804423',
+  '#804423',
+] %}
+
+{% block content %}
+
+	<!-- begin detail-page -->
+	<section class="detail-page">
+		<div class="container">
+			{% include "../includes/detail/mezh/detail-mezh.twig" %}
+		</div>
+	</section>
+	<!-- end detail-page -->
+
+{% endblock %}

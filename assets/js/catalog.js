@@ -22,10 +22,10 @@ $(function () {
     $(el).select2({
       placeholder: $(el).data("placeholder"),
       theme: $(el).data("theme"),
+      width: $(el).data("width"),
       allowClear: true,
       minimumResultsForSearch: -1,
       dropdownPosition: "below",
-      width: "auto",
     });
   });
 

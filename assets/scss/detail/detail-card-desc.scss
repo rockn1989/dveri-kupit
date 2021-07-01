@@ -1,0 +1,58 @@
+.detail-card-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $mediumGray;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .small-gray-title {
+    margin-bottom: 10px;
+  }
+}
+
+.sizes-list {
+  @include list-reset;
+  font-size: 0;
+  &__item {
+    margin: 0 10px 10px 0;
+  }
+
+  &__link {
+    padding: 9px 12px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18px;
+    color: $black;
+    border: 1px solid $black;
+    transition: background-color 0.3s, color 0.3s ease;
+    &:after {
+      content: "\e912";
+      margin-left: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $blue;
+      font-size: 8px;
+      color: $white;
+      font-family: "icomoon";
+      display: none;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+    }
+    &.active {
+      color: $white;
+      background-color: $black;
+      &:after {
+        display: inline-flex;
+      }
+    }
+  }
+}

@@ -171,6 +171,27 @@ a {
       border: 1px solid $blue;
     }
   }
+
+  &.link-size {
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    display: inline-flex;
+    align-items: center;
+    color: $blue;
+    font-family: $mainFont !important;
+    &:before {
+      content: "\e911";
+      font-family: "icomoon" !important;
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+  }
 }
 
 ul:not([class]) {
@@ -271,4 +292,8 @@ table:not([class]) {
 
 .green {
   color: $green;
+}
+
+.red {
+  color: $red;
 }

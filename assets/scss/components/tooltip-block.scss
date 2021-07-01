@@ -1,0 +1,97 @@
+.tooltip-block {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  display: none;
+  margin-left: 6px;
+
+  @media (min-width: $mob-s) {
+    display: inline-flex;
+  }
+  &__icon {
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid $black;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 150;
+    transition: background-color 0.3s, color 0.3s ease;
+  }
+
+  &__modal {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    display: flex;
+    align-items: center;
+    padding: 16px 20px 16px 40px;
+    background-color: $white;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+    z-index: 141;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: opacity 0.3s, visibility 0.3s ease;
+  }
+
+  &__modal-img {
+    margin-right: 10px;
+    margin-left: -40px;
+    width: 125px;
+    height: 125px;
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__modal-price {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__modal-count {
+    margin-bottom: 10px;
+  }
+
+  &__modal-type {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__modal-table {
+    width: 100px;
+    border-collapse: collapse;
+    tr {
+      td {
+        padding-bottom: 5px;
+        font-size: 12px;
+        line-height: 14px;
+        color: $black;
+        white-space: nowrap;
+        &:first-child {
+          padding-right: 8px;
+          color: $darkGray;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    overflow: visible;
+    .tooltip-block__icon {
+      color: $white;
+      background-color: $black;
+    }
+    .tooltip-block__modal {
+      opacity: 1;
+      visibility: visible;
+      z-index: 141;
+    }
+  }
+}
