@@ -89,4 +89,36 @@ $(function () {
       .stop(true, true)
       .slideToggle(350);
   });
+
+  /**
+   * Show colors detail
+   */
+
+  $(".js__scroll-toggle").on("click", function (e) {
+    e.preventDefault();
+    $(".scroll-wrapper").toggleClass("visible");
+    $(this)
+      .text($(this).text() == "Показать еще" ? "Скрыть" : "Показать еще")
+      .toggleClass("active");
+  });
+
+  /**
+   * Calc control
+   */
+
+  $(".calc-control").on("click", "span", function (e) {
+    e.preventDefault();
+
+    var input = $(this).closest(".calc-control").find("input");
+
+    if ($(this).hasClass("minus")) {
+      input.val() == 1
+        ? input.val(1)
+        : input.val(parseInt(input.val(), 10) - 1);
+    }
+
+    if ($(this).hasClass("plus")) {
+      input.val(parseInt(input.val(), 10) + 1);
+    }
+  });
 });

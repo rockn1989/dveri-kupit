@@ -1,0 +1,8 @@
+.detail-order {
+  height: 100%;
+  padding-top: 40px;
+  @media (min-width: $desk-w) {
+    padding: 40px 0 0 40px;
+    border-left: 1px solid $mediumGray;
+  }
+}

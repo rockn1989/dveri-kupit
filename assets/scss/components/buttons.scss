@@ -28,3 +28,17 @@
     color: $blue;
   }
 }
+
+.btn-add-cart {
+  width: 100%;
+  /* max-width: 205px; */
+  height: 80px;
+  font-family: $mainFont !important;
+  font-size: 16px;
+  line-height: 18px;
+  outline: none;
+  &:before {
+    margin-right: 16px;
+    font-family: "icomoon" !important;
+  }
+}

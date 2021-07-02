@@ -276,6 +276,23 @@ table:not([class]) {
   }
 }
 
+table.small-table {
+  width: 100%;
+  tr {
+    td {
+      padding: 5px 0;
+      font-size: 14px;
+      line-height: 20px;
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
 .small-title {
   margin-bottom: 5px;
   color: $darkGray;
@@ -296,4 +313,13 @@ table:not([class]) {
 
 .red {
   color: $red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.title-count {
+  font-size: 16px;
+  line-height: 18px;
 }

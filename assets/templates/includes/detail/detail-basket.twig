@@ -1,1 +1,73 @@
-basket
+<!-- begin detail-order -->
+<div class="detail-order">
+	<div class="title-count red mb-20">Остаток на складе — 1шт.</div>
+
+	<form action="" class="detail-add-basket">
+		<fieldset>
+			<label for="square-1" class="square-radio">
+				<input id="square-1" type="radio" name="price">
+				<span class="square-radio__input">
+					<div class="square-radio__title">Цена за дверь</div>
+					<div class="square-radio__value">8 870 Р.</div>
+				</span>
+			</label>
+			<label for="square-2" class="square-radio">
+				<input id="square-2" type="radio" name="price" checked>
+				<span class="square-radio__input">
+					<div class="square-radio__title">Цена за комплект</div>
+					<div class="square-radio__value">18 500 р.</div>
+				</span>
+			</label>
+		</fieldset>
+
+		<fieldset class="uk-flex">
+			<div class="calc-control">
+				<span class="minus">—</span>
+				<input type="text" class="calc-control__value" value="1">
+				<span class="plus">+</span>
+			</div>
+
+			<button type="submit" class="btn btn-add-cart icon-cart">Купить</button>
+		</fieldset>
+	</form>
+
+	<div class="detail-card-section">
+		<a href="" class="fast-buy">Купить в один клик</a>
+	</div>
+
+	<div class="detail-card-section">
+		<div class="accordion-block">
+			<div class="accordion-block__title small">Доставка</div>
+			<div class="accordion-block__desc hidden">
+				<table class="small-table">
+					<tr>
+						<td>Город</td>
+						<td>0 р.*</td>
+					</tr>
+					<tr>
+						<td>Область</td>
+						<td>от 1 400 р.</td>
+					</tr>
+					<tr>
+						<td>Самовывоз со склада</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="detail-card-section">
+		<div class="accordion-block">
+			<div class="accordion-block__title small">Оплата</div>
+			<div class="accordion-block__desc hidden"></div>
+		</div>
+	</div>
+	<div class="detail-card-section">
+		<div class="accordion-block">
+			<div class="accordion-block__title small">Установка</div>
+			<div class="accordion-block__desc hidden"></div>
+		</div>
+	</div>
+
+</div>
+<!-- end detail-order -->
