@@ -1,4 +1,53 @@
 {% block content %}
+
+	<section id="detail-info" class="section-default">
+		<div class="container">
+			<div class="section-default__inner">
+				<div class="uk-grid">
+					<div class="uk-width-expand@m">1</div>
+					<div class="uk-width-1-4@m">
+						<aside class="promo-info" uk-sticky="bottom: #detail-info">
+							<div class="brand-info-card">
+								<picture class="brand-info-card__img">
+									<img src="img/media/brands/brand-preview-img-6.png" width="117" height="70" alt="Porte Vista" loading="lazy">
+								</picture>
+								<div class="brand-info-card__title">
+									<a href="">Фабрика PORTE VISTA</a>
+									<div class="small-gray-title">7 товаров</div>
+								</div>
+
+								<ul class="brand-info-card__list-links">
+									<li>
+										<a href="">Все товары категории</a>
+									</li>
+									<li>
+										<a href="">Все товары бренда</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="short-card">
+								<div class="short-card__img">
+									<figure>
+										<picture>
+											<source srcset="img/media/webp/catalog-main-img-3.webp" type="image/webp">
+											<source srcset="img/media/catalog/catalog-main-img-3.png" type="image/png">
+											<img src="img/media/catalog/catalog-main-img-3.png" width="325" height="252" alt="" loading="lazy">
+										</picture>
+									</figure>
+								</div>
+								<div class="short-card__desc">
+									<a href="" class="short-card__title">комлектующие к дверям</a>
+									<div class="short-card__count">1 189 товаров</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	{% include "../sections/similar-section.twig" %}
 	{% include "../sections/similar-section-slider.twig" %}
 	{% include "../components/news-list.twig" %}
