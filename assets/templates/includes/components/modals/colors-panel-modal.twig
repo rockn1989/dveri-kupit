@@ -1,0 +1,112 @@
+{% extends "./default-modal.twig" %}
+{% set modal = {id: 'colors-panel-modal', class: 'colors-panel-modal', title: 'Выберите панель'} %}
+
+{% block content %}
+
+	<div class="vertical-scroll-block">
+		<div class="vertical-scroll-block__inner">
+			<div class="colors-panel-list">
+				<div class="colors-panel__group">
+					<div class="colors-panel__title">Шпон</div>
+					<div class="color-panel active">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-1.webp" type="image/webp">
+							<source srcset="img/media/color-panel-1.png" type="image/png">
+							<img src="img/media/color-panel-1.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price">
+							1 870 Р.</div>
+						<div class="title-count green">В наличии</div>
+					</div>
+					<div class="color-panel">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-2.webp" type="image/webp">
+							<source srcset="img/media/color-panel-2.png" type="image/png">
+							<img src="img/media/color-panel-2.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price">
+							1 870 Р.</div>
+						<div class="title-count green">В наличии</div>
+					</div>
+					<div class="color-panel">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-3.webp" type="image/webp">
+							<source srcset="img/media/color-panel-3.png" type="image/png">
+							<img src="img/media/color-panel-1.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price">
+							1 870 Р.</div>
+						<div class="title-count gray">Под заказ</div>
+					</div>
+				</div>
+
+				<div class="colors-panel__group">
+					<div class="colors-panel__title">Пленка ПВХ</div>
+					<div class="color-panel">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-4.webp" type="image/webp">
+							<source srcset="img/media/color-panel-4.png" type="image/png">
+							<img src="img/media/color-panel-4.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price">
+							2 670 Р.</div>
+						<div class="title-count green">В наличии</div>
+					</div>
+					<div class="color-panel">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-5.webp" type="image/webp">
+							<source srcset="img/media/color-panel-5.png" type="image/png">
+							<img src="img/media/color-panel-5.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price"></div>
+						<div class="title-count gray">Под заказ</div>
+					</div>
+					<div class="color-panel">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-6.webp" type="image/webp">
+							<source srcset="img/media/color-panel-6.png" type="image/png">
+							<img src="img/media/color-panel-6.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price"></div>
+						<div class="title-count gray">Под заказ</div>
+					</div>
+
+					<div class="color-panel">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-7.webp" type="image/webp">
+							<source srcset="img/media/color-panel-7.png" type="image/png">
+							<img src="img/media/color-panel-7.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price"></div>
+						<div class="title-count gray">Под заказ</div>
+					</div>
+				</div>
+
+				<div class="colors-panel__group">
+					<div class="colors-panel__title">Шпон</div>
+					<div class="color-panel">
+						<picture class="color-panel__img">
+							<source srcset="img/media/webp/color-panel-8.webp" type="image/webp">
+							<source srcset="img/media/color-panel-8.png" type="image/png">
+							<img src="img/media/color-panel-8.png" width="52" height="72" alt="шпон" loading="lazy">
+						</picture>
+						<div class="color-panel__title"></div>
+						<div class="color-panel__price">
+							1 870 Р.</div>
+						<div class="title-count green">В наличии</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="" class="btn btn--lg">Выбрать</a>
+	</div>
+
+{% endblock %}

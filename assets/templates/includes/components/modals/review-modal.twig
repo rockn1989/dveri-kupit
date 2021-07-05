@@ -1,0 +1,28 @@
+{% extends "./default-modal.twig" %}
+{% set modal = {id: 'review-modal', class: 'review-modal', title: 'Оставить отзыв'} %}
+
+{% block content %}
+	<p>
+		Мы опубликуем ваш отзыв, после проверки администратором магазина
+	</p>
+
+	<form action="" class="default-form">
+		<div class="form-group">
+			<input type="text" placeholder="Ваше имя">
+		</div>
+		<div class="form-group">
+			<input type="email" placeholder="Email">
+		</div>
+
+		<div class="form-group form-group--lg">
+			<textarea placeholder="Ваш отзыв"></textarea>
+		</div>
+
+		<button type="submit" class="btn btn--lg">Отправить</button>
+	</form>
+
+	<div class="politics">
+		Нажимая на кнопку отправить, я даю согласие на обработку
+		<a href="/politics/">Персональных данных</a>
+	</div>
+{% endblock %}

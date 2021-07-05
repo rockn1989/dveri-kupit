@@ -1,0 +1,74 @@
+.colors-panel {
+  &__group {
+    font-size: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.color-panel {
+  margin-right: 40px;
+  margin-bottom: 40px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  cursor: pointer;
+  text-align: center;
+  &__img {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 82px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $mediumGray;
+
+    &:after {
+      content: "\e912";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: $white;
+      background-color: $blue;
+      font-size: 8px;
+      font-family: "icomoon";
+      flex-shrink: 0;
+      transition: background-color 0.3s ease;
+      transform: translateX(-50%);
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &.active {
+    .color-panel__img {
+      border-color: $blue;
+      &:after {
+        display: inline-flex;
+      }
+    }
+  }
+}

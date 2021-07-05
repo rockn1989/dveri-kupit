@@ -121,4 +121,38 @@ $(function () {
       input.val(parseInt(input.val(), 10) + 1);
     }
   });
+
+  /**
+   * Vertical scroll bar
+   */
+
+  UIkit.util.on($(".colors-panel-modal"), "show", function () {
+    $(".vertical-scroll-block__inner").mCustomScrollbar({
+      axis: "y",
+      setHeight: 500,
+      scrollInertia: 300,
+    });
+  });
+
+  UIkit.util.on($(".colors-panel-modal"), "hide", function () {
+    $(".vertical-scroll-block__inner")
+      .mCustomScrollbar("destroy")
+      .css("height", "400px");
+  });
+
+  /**
+   * Check color panel
+   */
+
+  $.each($(".colors-panel-list"), function () {
+    $(this).on("click", ".color-panel", function (e) {
+      e.preventDefault();
+      console.log($(this));
+      $(this)
+        .parents(".colors-panel-list")
+        .find(".color-panel")
+        .removeClass("active");
+      $(this).addClass("active");
+    });
+  });
 });

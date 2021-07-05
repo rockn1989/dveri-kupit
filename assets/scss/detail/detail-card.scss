@@ -10,3 +10,11 @@
     border-bottom: 1px solid $black;
   }
 }
+
+.detail-info {
+  .uk-switcher {
+    @media (min-width: $tablet-w) {
+      padding-right: 40px;
+    }
+  }
+}

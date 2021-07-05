@@ -58,6 +58,18 @@ $(function () {
   });
 
   /**
+   * Input tel mask
+   */
+
+  $(".js__input-mask")
+    .mask("+7 999 999-99-99", { clearIfNotMatch: true })
+    .focus(function (e) {
+      if (!$(this).val()) {
+        $(this).val("+7 ");
+      }
+    });
+
+  /**
    * Svg4everybody
    */
 

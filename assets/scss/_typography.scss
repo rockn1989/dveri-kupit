@@ -259,7 +259,7 @@ blockquote {
   }
 }
 
-table:not([class]) {
+table {
   width: 100%;
   border-collapse: collapse;
 
@@ -276,9 +276,20 @@ table:not([class]) {
   }
 }
 
+table.detail-table {
+  tr {
+    td {
+      &:first-child {
+        width: 35%;
+      }
+    }
+  }
+}
+
 table.small-table {
   width: 100%;
   tr {
+    background-color: transparent;
     td {
       padding: 5px 0;
       font-size: 14px;
@@ -319,7 +330,15 @@ table.small-table {
   color: $blue;
 }
 
+.gray {
+  color: $darkGray;
+}
+
 .title-count {
   font-size: 16px;
   line-height: 18px;
+}
+
+.no-bold {
+  font-weight: 400 !important;
 }

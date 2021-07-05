@@ -190,12 +190,12 @@
 						{% if i == 5 %}
 							<label for="{{i}}_{{colors[i]}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
 								<input id="{{i}}_{{colors[i]}}" type="checkbox" value="" checked>
-								<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+								<span class="custom-checkbox" style="background-color: {{colors[i]}}" uk-toggle="#colors-panel-modal"></span>
 							</label>
 						{% else %}
 							<label for="{{i}}_{{colors[i]}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
 								<input id="{{i}}_{{colors[i]}}" type="checkbox" value="">
-								<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+								<span class="custom-checkbox" style="background-color: {{colors[i]}}" uk-toggle="#colors-panel-modal"></span>
 							</label>
 						{% endif %}
 					{% endfor %}

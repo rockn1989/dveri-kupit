@@ -1,0 +1,26 @@
+.vertical-scroll-block {
+  overflow: hidden;
+  &__inner {
+    margin-bottom: 40px;
+  }
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+
+  background-color: $darkGray;
+}
+
+.mCSB_scrollTools .mCSB_dragger {
+  max-height: 180px !important;
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: $darkGray;
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  width: 3px;
+  background-color: $mediumGray;
+}
