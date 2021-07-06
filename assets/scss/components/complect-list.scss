@@ -1,0 +1,88 @@
+.complect-list {
+  @include list-reset;
+}
+
+.complect-item {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $black;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    margin-right: 20px;
+    width: 40%;
+    @media (min-width: $mob-s) {
+      width: 45%;
+    }
+    @media (min-width: $desk-w) {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    color: inherit;
+    display: flex;
+    align-items: center;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .calc-control {
+      margin-right: 10px;
+      span {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 12px;
+        background-color: transparent;
+      }
+      .calc-control__value {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 12px;
+        background-color: transparent;
+      }
+      & > * {
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  &__price {
+    margin-right: 10px;
+  }
+
+  &__basket {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    color: $white;
+    background-color: $blue;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 17px;
+    &:before {
+      font-size: 10px;
+    }
+
+    &:hover {
+      &:before {
+        color: $white;
+      }
+    }
+  }
+}

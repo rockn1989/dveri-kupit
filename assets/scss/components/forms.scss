@@ -151,6 +151,7 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    outline: none;
     &:after {
       content: "";
       position: absolute;
@@ -167,6 +168,7 @@
 }
 
 .checkbox-list {
+  margin-bottom: -20px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

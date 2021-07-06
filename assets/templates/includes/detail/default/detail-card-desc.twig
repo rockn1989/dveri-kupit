@@ -1,0 +1,695 @@
+{% set colors = [
+  '#D7D7D7',
+  '#888279',
+  '#3C2821',
+  '#83888C',
+  '#833435',
+  '#ffffff',
+  '#35261D',
+  '#804423',
+  '#804423',
+  '#804423',
+] %}
+
+<!-- begin detail-card-desc -->
+<div class="detail-card-desc">
+	<h1 class="title-h2">Президент люкс</h1>
+
+	<div class="detail-card-section detail-card-section--full-width uk-padding-remove-top uk-padding-remove-bottom border-none uk-hidden@m">
+		<div class="title-count red mb-20">Остаток на складе — 1шт.</div>
+
+		<form action="" class="detail-add-basket uk-margin-remove-bottom">
+			<fieldset>
+				<label for="square-1-m" class="square-radio">
+					<input id="square-1-m" type="radio" name="price">
+					<span class="square-radio__input">
+						<div class="square-radio__title">Цена за дверь</div>
+						<div class="square-radio__value">8 870 Р.</div>
+					</span>
+				</label>
+				<label for="square-2-m" class="square-radio">
+					<input id="square-2-m" type="radio" name="price" checked>
+					<span class="square-radio__input">
+						<div class="square-radio__title">Цена за комплект</div>
+						<div class="square-radio__value">18 500 р.</div>
+					</span>
+				</label>
+			</fieldset>
+
+			<fieldset class="uk-flex">
+				<div class="calc-control">
+					<span class="minus">—</span>
+					<input type="text" class="calc-control__value" value="1">
+					<span class="plus">+</span>
+				</div>
+
+				<button type="submit" class="btn btn-add-cart icon-cart">Купить</button>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="detail-card-section detail-card-section--full-width">
+		<div class="uk-grid">
+			<div class="uk-width-1-1">
+				<div class="small-gray-title">Размер полотна, мм</div>
+				<ul class="sizes-list">
+					<li class="sizes-list__item">
+						<a href="#" class="sizes-list__link active">600 х 1900</a>
+					</li>
+					<li class="sizes-list__item">
+						<a href="#" class="sizes-list__link">600 х 2000</a>
+					</li>
+					<li class="sizes-list__item">
+						<a href="#" class="sizes-list__link">700 х 2000</a>
+					</li>
+					<li class="sizes-list__item">
+						<a href="#" class="sizes-list__link">2050 x 960</a>
+					</li>
+					<li class="sizes-list__item">
+						<a href="#" class="sizes-list__link">800 х 2000</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a href="#call-spec" class="link-size" uk-toggle>Вызвать замерщика</a>
+
+		<div class="colors-list uk-margin-small-top">
+			{% for j in 0..3 %}
+				{% if j == 5 %}
+					<label for="{{j}}_{{colors[j]}}-f" class="color-checkbox" uk-tooltip="title: {{colors[j]}}; pos: right">
+						<input id="{{j}}_{{colors[j]}}-f" type="checkbox" value="" checked>
+						<span class="custom-checkbox" style="background-color: {{colors[j]}}" uk-toggle="#colors-fur-modal"></span>
+					</label>
+				{% else %}
+					<label for="{{j}}_{{colors[j]}}-f" class="color-checkbox" uk-tooltip="title: {{colors[j]}}; pos: right">
+						<input id="{{j}}_{{colors[j]}}-f" type="checkbox" value="">
+						<span class="custom-checkbox" style="background-color: {{colors[j]}}" uk-toggle="#colors-fur-modal"></span>
+					</label>
+				{% endif %}
+			{% endfor %}
+
+		</div>
+	</div>
+
+	<div class="detail-card-section detail-card-section--full-width">
+		<div class="accordion-block__title open">Вид полотна</div>
+		<div class="accordion-block__desc">
+
+			<div class="checkbox-list">
+				<label for="1" class="custom-checkbox">
+					<input id="1" type="checkbox" checked="">
+					<span class="custom-checkbox__input"></span>
+					<span class="custom-checkbox__label">Глухая</span>
+				</label>
+
+				<label for="2" class="custom-checkbox">
+					<input id="2" type="checkbox">
+					<span class="custom-checkbox__input"></span>
+					<span class="custom-checkbox__label">Остекленная</span>
+				</label>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="detail-card-section detail-card-section--full-width">
+		<p>Выберите комплектующие
+		</p>
+		<div class="accordion-block">
+			<div class="accordion-block__title open">Короб</div>
+			<div class="accordion-block__desc">
+				<ul class="complect-list">
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="complect-item__price uk-hidden@l">405 р./шт</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@l">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="complect-item__price uk-hidden@l">405 р./шт</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@l">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="detail-card-section detail-card-section--full-width">
+		<div class="accordion-block">
+			<div class="accordion-block__title open">Наличник</div>
+			<div class="accordion-block__desc">
+				<ul class="complect-list">
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="complect-item__price uk-hidden@l">405 р./шт</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@l">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="complect-item__price uk-hidden@l">405 р./шт</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@l">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="detail-card-section detail-card-section--full-width">
+		<div class="accordion-block">
+			<div class="accordion-block__title open">Доборы</div>
+			<div class="accordion-block__desc">
+				<div class="scroll-wrapper">
+					<div class="scroll-wrapper__inner" data-height="90">
+						<ul class="complect-list">
+							{% for 0 in 0..3 %}
+								<li class="complect-list__item complect-item">
+									<div class="complect-item__header">
+										<div class="complect-item__title">
+											<span>Короб телескоп 2150х75х32</span>
+											<div class="tooltip-block">
+												<div class="tooltip-block__icon">i</div>
+
+												<div class="tooltip-block__modal">
+													<div class="tooltip-block__modal-img">
+														<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+													</div>
+													<div class="tooltip-block__modal-desc">
+														<div class="tooltip-block__modal-price">4 873 р.</div>
+														<div class="tooltip-block__modal-count">
+															<span class="red">Остаток на складе — 2 шт.</span>
+														</div>
+
+														<div class="tooltip-block__modal-type">Добор 200мм</div>
+														<table class="tooltip-block__modal-table">
+															<tr>
+																<td>Производитель:</td>
+																<td>MORELLI</td>
+															</tr>
+															<tr>
+																<td>Размеры:</td>
+																<td>10х200х2070 мм
+																</td>
+															</tr>
+															<tr>
+																<td>Материал:</td>
+																<td>Экошпон 3D
+																</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="complect-item__price uk-hidden@l">405 р./шт</div>
+									</div>
+									<div class="complect-item__body">
+										<div class="calc-control">
+											<span class="minus">—</span>
+											<input type="text" class="calc-control__value" value="1">
+											<span class="plus">+</span>
+										</div>
+
+										<div class="complect-item__price uk-visible@l">405 р./шт</div>
+										<a href="" class="complect-item__basket icon-cart"></a>
+									</div>
+								</li>
+
+								<li class="complect-list__item complect-item">
+									<div class="complect-item__header">
+										<div class="complect-item__title">
+											<span>Короб телескоп 2150х75х32</span>
+											<div class="tooltip-block">
+												<div class="tooltip-block__icon">i</div>
+
+												<div class="tooltip-block__modal">
+													<div class="tooltip-block__modal-img">
+														<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+													</div>
+													<div class="tooltip-block__modal-desc">
+														<div class="tooltip-block__modal-price">4 873 р.</div>
+														<div class="tooltip-block__modal-count">
+															<span class="red">Остаток на складе — 2 шт.</span>
+														</div>
+
+														<div class="tooltip-block__modal-type">Добор 200мм</div>
+														<table class="tooltip-block__modal-table">
+															<tr>
+																<td>Производитель:</td>
+																<td>MORELLI</td>
+															</tr>
+															<tr>
+																<td>Размеры:</td>
+																<td>10х200х2070 мм
+																</td>
+															</tr>
+															<tr>
+																<td>Материал:</td>
+																<td>Экошпон 3D
+																</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="complect-item__price uk-hidden@l">405 р./шт</div>
+									</div>
+									<div class="complect-item__body">
+										<div class="calc-control">
+											<span class="minus">—</span>
+											<input type="text" class="calc-control__value" value="1">
+											<span class="plus">+</span>
+										</div>
+
+										<div class="complect-item__price uk-visible@l">405 р./шт</div>
+										<a href="" class="complect-item__basket icon-cart"></a>
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<a href="" class="show-more icon-plus blue uk-margin-remove js__scroll-toggle">Показать еще</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="detail-card-section detail-card-section--full-width">
+		<div class="accordion-block">
+			<div class="accordion-block__title">Карнизы</div>
+			<div class="accordion-block__desc hidden">
+				<ul class="complect-list">
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="complect-item__price uk-hidden@s">405 р./шт</div>
+							</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@s">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="complect-item__price uk-hidden@s">405 р./шт</div>
+							</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@s">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="detail-card-section detail-card-section--full-width">
+		<div class="accordion-block">
+			<div class="accordion-block__title">Притворная планка</div>
+			<div class="accordion-block__desc hidden">
+				<ul class="complect-list">
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="complect-item__price uk-hidden@s">405 р./шт</div>
+							</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@s">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+
+					<li class="complect-list__item complect-item">
+						<div class="complect-item__header">
+							<div class="complect-item__title">
+								<span>Короб телескоп 2150х75х32</span>
+								<div class="tooltip-block">
+									<div class="tooltip-block__icon">i</div>
+
+									<div class="tooltip-block__modal">
+										<div class="tooltip-block__modal-img">
+											<img src="img/media/tooltip-img.png" width="128" height="135" alt="" loading="lazy">
+										</div>
+										<div class="tooltip-block__modal-desc">
+											<div class="tooltip-block__modal-price">4 873 р.</div>
+											<div class="tooltip-block__modal-count">
+												<span class="red">Остаток на складе — 2 шт.</span>
+											</div>
+
+											<div class="tooltip-block__modal-type">Добор 200мм</div>
+											<table class="tooltip-block__modal-table">
+												<tr>
+													<td>Производитель:</td>
+													<td>MORELLI</td>
+												</tr>
+												<tr>
+													<td>Размеры:</td>
+													<td>10х200х2070 мм
+													</td>
+												</tr>
+												<tr>
+													<td>Материал:</td>
+													<td>Экошпон 3D
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="complect-item__price uk-hidden@s">405 р./шт</div>
+							</div>
+						</div>
+						<div class="complect-item__body">
+							<div class="calc-control">
+								<span class="minus">—</span>
+								<input type="text" class="calc-control__value" value="1">
+								<span class="plus">+</span>
+							</div>
+
+							<div class="complect-item__price uk-visible@s">405 р./шт</div>
+							<a href="" class="complect-item__basket icon-cart"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- end detail-card-desc -->

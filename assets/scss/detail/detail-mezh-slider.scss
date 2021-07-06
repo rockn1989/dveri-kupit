@@ -33,10 +33,6 @@
   a {
     display: flex;
     justify-content: center;
-
-    @media (min-width: $tablet-w) {
-      justify-content: start;
-    }
   }
 }
 

@@ -4,7 +4,7 @@
   overflow: hidden;
   display: none;
   margin-left: 6px;
-
+  flex-shrink: 0;
   @media (min-width: $mob-s) {
     display: inline-flex;
   }
@@ -90,11 +90,12 @@
     .tooltip-block__icon {
       color: $white;
       background-color: $black;
+      z-index: 161;
     }
     .tooltip-block__modal {
       opacity: 1;
       visibility: visible;
-      z-index: 141;
+      z-index: 160;
     }
   }
 }

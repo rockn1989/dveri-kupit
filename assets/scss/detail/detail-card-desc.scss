@@ -66,6 +66,8 @@
   font-size: 0;
   &__item {
     margin: 0 10px 10px 0;
+    display: inline-block;
+    vertical-align: top;
   }
 
   &__link {
@@ -114,13 +116,14 @@
     margin-bottom: 6px;
     margin-left: -2px;
     padding: 2px;
-    height: 42px;
+    height: 0;
     overflow: hidden;
   }
 
   &.visible {
     .scroll-wrapper__inner {
-      height: auto;
+      height: auto !important;
+      overflow: visible;
     }
   }
 }

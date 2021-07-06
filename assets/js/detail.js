@@ -37,7 +37,7 @@ $(function () {
     asNavFor: ".detail-card-slider-hero",
     dots: false,
     infinity: true,
-
+    centerMode: false,
     lazyLoad: "ondemand",
     focusOnSelect: true,
     prevArrow:
@@ -155,5 +155,13 @@ $(function () {
         .removeClass("active");
       $(this).addClass("active");
     });
+  });
+
+  /**
+   * Scroll wrapper
+   */
+
+  $.each($(".scroll-wrapper__inner"), function () {
+    $(this).outerHeight($(this).data("height"));
   });
 });
