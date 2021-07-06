@@ -10,6 +10,7 @@ $(function () {
     autoplay: false,
     lazyLoad: "ondemand",
     fade: true,
+
     asNavFor: ".detail-card-slider-preview",
 
     responsive: [
@@ -36,13 +37,13 @@ $(function () {
     asNavFor: ".detail-card-slider-hero",
     dots: false,
     infinity: true,
-    centerMode: false,
+
     lazyLoad: "ondemand",
     focusOnSelect: true,
     prevArrow:
-      '<div class="btn-slide slick-prev"><i class="icon-arrow-right"></i></div>',
+      '<div class="btn-slide slick-prev"><i class="icon-chevron-right"></i></div>',
     nextArrow:
-      '<div class="btn-slide slick-next"><i class="icon-arrow-right"></i></div>',
+      '<div class="btn-slide slick-next"><i class="icon-chevron-right"></i></div>',
     responsive: [
       {
         breakpoint: 1245,
@@ -51,9 +52,9 @@ $(function () {
         },
       },
       {
-        breakpoint: 1244,
+        breakpoint: 959,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
         },
       },
       {

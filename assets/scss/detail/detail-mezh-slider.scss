@@ -52,6 +52,13 @@
 
 .detail-card-slider-hero {
   margin-bottom: 30px;
+  height: 560px;
+  overflow: hidden;
+
+  &.slick-initialized {
+    height: auto;
+    overflow: visible;
+  }
 
   @media (min-width: $mob-s) {
     margin-bottom: 50px;
@@ -63,12 +70,22 @@
 }
 
 .detail-card-slider-preview {
+  height: 100px;
+  overflow: hidden;
+
+  &.slick-initialized {
+    height: auto;
+    overflow: visible;
+  }
+
   .slick-track {
     display: flex;
+    justify-content: center;
   }
   .slide {
     padding: 0 2px;
     height: auto;
+    width: 82px !important;
     min-height: 100px;
     picture {
       padding: 11px 20px;
@@ -84,5 +101,49 @@
         border-color: $blue;
       }
     }
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: auto;
+    height: auto;
+    &:before {
+      display: none;
+    }
+
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      color: $black;
+      border: 1px solid $black;
+      border-radius: 50%;
+      &:before {
+        font-size: 14px;
+        color: inherit;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      i {
+        color: $white;
+        background-color: $black;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: -10px;
+    z-index: 999;
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slick-next {
+    right: -10px;
   }
 }
