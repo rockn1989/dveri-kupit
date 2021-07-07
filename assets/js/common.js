@@ -34,6 +34,20 @@ $(function () {
   });
 
   /**
+   * Left menu
+   */
+
+  $(".js__toggle-sublist").on("click", function (e) {
+    e.preventDefault();
+    $(this)
+      .toggleClass("open")
+      .parent("a")
+      .siblings("ul")
+      .stop(true, true)
+      .slideToggle("350");
+  });
+
+  /**
    * Mobile search form
    */
   var $mobileForm = $(".mobile-search-form");

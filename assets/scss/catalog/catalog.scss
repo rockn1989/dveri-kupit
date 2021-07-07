@@ -9,24 +9,8 @@
 }
 
 .catalog-body {
-  &__list {
-    border-bottom: 1px solid $mediumGray;
-  }
-
   &__item {
     margin-bottom: 50px !important;
-  }
-}
-
-.catalog-bar {
-  padding: 20px 0;
-
-  @media (min-width: $tablet-w) {
-    padding: 40px 0;
-  }
-
-  &.border-bottom {
-    border-bottom: 1px solid $mediumGray;
   }
 }
 

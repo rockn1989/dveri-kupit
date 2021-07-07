@@ -152,3 +152,22 @@
     }
   }
 }
+
+.news-block {
+  @media (min-width: $tablet-w) {
+    padding-left: 20px;
+  }
+}
+
+.news-block__list {
+  .uk-grid {
+    & > div {
+      &:last-child {
+        .post-news {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

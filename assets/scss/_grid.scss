@@ -66,6 +66,23 @@
   border: none !important;
 }
 
+.h-panel {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-w) {
+    padding: 40px 0;
+  }
+}
+
+.border-vertical {
+  border-top: 1px solid $mediumGray;
+  border-bottom: 1px solid $mediumGray;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $mediumGray;
+}
+
 @media (min-width: $desk-w) {
   .uk-margin-large-bottom {
     margin-bottom: 80px !important;

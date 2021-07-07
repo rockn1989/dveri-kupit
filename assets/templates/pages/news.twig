@@ -1,0 +1,13 @@
+{% extends "../layouts/main-with-left-block.twig" %}
+{% set title = "Новости" %}
+{% set bread = ['Главная', 'О компании', 'Новости'] %}
+
+{% block leftSide %}
+	<div class="left-menu">
+		{% include "../includes/components/left-menu.twig" %}
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% include "../includes/components/news-block.twig" %}
+{% endblock %}
