@@ -9,6 +9,10 @@
   @media (min-width: $desk-w) {
     padding: 0 $gutter;
   }
+
+  .container {
+    padding: 0;
+  }
 }
 
 .page-wrapper {
@@ -60,4 +64,10 @@
 
 .border-none {
   border: none !important;
+}
+
+@media (min-width: $desk-w) {
+  .uk-margin-large-bottom {
+    margin-bottom: 80px !important;
+  }
 }

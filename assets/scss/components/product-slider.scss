@@ -1,4 +1,7 @@
 .product-slider {
+  .container {
+    padding: 0 20px;
+  }
   .slider {
     margin-bottom: 0;
     height: 596px;
@@ -51,7 +54,7 @@
     }
 
     svg {
-      color: $black;
+      color: $white;
     }
   }
 

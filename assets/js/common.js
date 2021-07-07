@@ -74,4 +74,36 @@ $(function () {
    */
 
   svg4everybody();
+
+  /**
+   * Youtube
+   */
+
+  if ($(".youtube").length) {
+    const $youtube = $(".youtube"),
+      source =
+        "https://img.youtube.com/vi/" + $youtube.data("embed") + "/0.jpg",
+      image = new Image();
+
+    image.src = source;
+    image.addEventListener("load", function () {
+      $youtube.append(image);
+    });
+
+    $youtube.on("click", function (e) {
+      e.preventDefault();
+      const iframe = $("<iframe>", {
+        frameborder: 0,
+        allowfullscreen: "",
+        autoplay: true,
+        src:
+          "https://www.youtube.com/embed/" +
+          $youtube.data("embed") +
+          "?rel=0&showinfo=0&autoplay=1",
+      });
+      $youtube.find(".play-btn").fadeOut("350");
+      $youtube.find("img").fadeOut("350");
+      $youtube.append(iframe);
+    });
+  }
 });

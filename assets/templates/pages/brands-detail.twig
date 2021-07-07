@@ -1,0 +1,242 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Фабрика Fortezza" %}
+{% set bread = ['Главная', 'Бренды', 'Фабрика Fortezza'] %}
+
+{% block content %}
+
+	<!-- brand-detail-section -->
+	<div class="brand-detail-section">
+		<div class="container">
+
+			<div class="uk-margin-large-bottom">
+				<div class="container">
+					<div class="uk-grid">
+						<div class="uk-width-1-3@s">
+							<div class="brand-detail-section__info">
+								<h1 class="title-h1">Фабрика FORtezza</h1>
+
+								<picture class="brand-item__img">
+									<source srcset="img/media/webp/brand-preview-img-2.webp" type="image/webp">
+									<source srcset="img/media/brands/brand-preview-img-2.png" type="image/png">
+									<img src="img/media/brands/brand-preview-img-2.png" alt="" loading="lazy">
+								</picture>
+							</div>
+
+						</div>
+						<div class="uk-width-expand@s">
+							<div class="brand-detail-section__desc">
+								<p>«Двери Регионов» — торгово-производственная компания, начавшая свою деятельность в 2008 году, сегодня является одним из лидирующих поставщиков межкомнатных и входных дверей на московском рынке.</p>
+								<p>
+									Целью Группы Компаний «Двери Регионов» является полноценное и комплексное удовлетворение потребности людей при приобретении дверей, создание качественного и доступного во всех отношениях продукта.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- brand-detail-section -->
+
+	<section class="section-default">
+		<div class="container">
+			<div
+				class="section-default__inner">
+
+				<!-- begin product-slider -->
+				<div class="product-slider">
+					<div class="container">
+						<div class="slider">
+							{% for i in 0..5 %}
+
+								{% if i == 3 %}
+									<div class="slide">
+										<div class="youtube" data-embed="WqZZppQd87M">
+											<div class="play-btn icon-play"></div>
+											<div class="youtube__title">
+												Посмотрите как мы летаем в москве</div>
+										</div>
+									</div>
+								{% else %}
+
+									<div class="slide">
+										<div class="short-card">
+											<div class="short-card__img">
+												<figure>
+													<picture>
+														<source srcset="img/media/webp/catalog-main-img-1.webp" type="image/webp">
+														<source srcset="img/media/catalog/catalog-main-img-1.png" type="image/png">
+														<img src="img/media/catalog/catalog-main-img-1.png" width="325" height="252" alt="" loading="lazy">
+													</picture>
+												</figure>
+											</div>
+											<div class="short-card__desc">
+												<a href="" class="short-card__title"></a>
+												<div class="short-card__count"></div>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<!-- end product-slider -->
+			</div>
+		</div>
+	</section>
+
+	<div class="catalog">
+		<div class="container">
+			<div class="catalog__header">
+				<div class="title-h2 uk-margin-medium-bottom">Двери fortezza</div>
+			</div>
+			<section class="catalog-body">
+				<div class="catalog-body__list grid-view">
+
+					{% for i in 1..12 %}
+
+						<div class="card">
+							<div class="card__inner">
+								<div class="card__header">
+									<a href="">
+										<picture class="card__img">
+											<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+											<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+											<img src="img/media/sliders/product-slide-1.png" width="117" height="285" alt="" loading="lazy">
+										</picture>
+									</a>
+
+									<div class="stocks">
+										<div class="stocks__sale">sale</div>
+										<div class="stocks__hit">hit</div>
+									</div>
+									<div class="add-favorite">
+										<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+										<a href="" class="icon-fav-fill uk-hidden"></a>
+									</div>
+
+									<div class="colors-list">
+										{% for i in 0..9 %}
+											<label for="{{i}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
+												<input id="{{i}}" type="checkbox" value="">
+												<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+											</label>
+										{% endfor %}
+										<a href="" class="round-plus icon-plus" uk-tooltip="title: Более 20 цветов; pos: right"></a>
+									</div>
+
+									<ul class="card__settings">
+										<li>Стандарт</li>
+										<li>Со сменными панелями</li>
+										<li>Взломостойкая</li>
+									</ul>
+								</div>
+
+								<div class="card__body">
+									<div class="card__title">
+										<a href="">Uno Art Line</a>
+									</div>
+									<div class="card__desc">
+										<div class="card__price">
+											<div class="card__price-old">от 9 870 Р.</div>
+											<div class="card__price-current">от 6 870 Р.</div>
+										</div>
+										<div class="card__stocks">Скидка 50%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-horizontal">
+							<div class="card-horizontal__inner">
+								<div class="uk-grid">
+									<div class="uk-width-1-4@m">
+										<div class="card-horizontal__img" uk-lightbox>
+											<a href="img/media/catalog/card-img-h-1.png" class="card-horizontal__img-frontface">
+												<picture>
+													<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+													<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+													<img src="img/media/sliders/product-slide-1.png.png" width="132" height="298" alt="Uno Art Line" loading="lazy">
+												</picture>
+											</a>
+											<a href="img/media/catalog/card-img-h-2.png" class="card-horizontal__img-backface">
+												<picture>
+													<source srcset="img/media/webp/product-slide-2.webp" type="image/webp">
+													<source srcset="img/media/sliders/product-slide-2.png" type="image/png">
+													<img src="img/media/sliders/product-slide-2.png.png" width="132" height="298" alt="Uno Art Line" loading="lazy">
+												</picture>
+											</a>
+										</div>
+									</div>
+									<div class="uk-width-expand">
+										<div class="card-horizontal__desc">
+											<div class="card-horizontal__title title-h3">Uno Art Line</div>
+											<div class="card-horizontal__table">
+												<table>
+													<tr>
+														<td>Количество контуров</td>
+														<td>3-контурная</td>
+													</tr>
+													<tr>
+														<td>Назначение</td>
+														<td>Уличная</td>
+													</tr>
+													<tr>
+														<td>Размер</td>
+														<td>2000 х 440 х 1200 мм</td>
+													</tr>
+													<tr>
+														<td>Толщина полотна</td>
+														<td>400 мм</td>
+													</tr>
+													<tr>
+														<td>Толщина листа металла</td>
+														<td>100 мм</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="uk-width-1-4@m">
+										<div class="card-horizontal__info">
+
+											<div class="add-favorite">
+												<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+												<a href="" class="icon-fav-fill uk-hidden"></a>
+											</div>
+											<div class="card-horizontal__count">
+												<div class="green">Остаток на складе — 122 шт.</div>
+											</div>
+											<div class="small-title">Цена за штуку</div>
+											<div class="card-horizontal__price">
+												<div class="card-horizontal__price-old">1 290 р.</div>
+												<div class="card-horizontal__price-current">от 990 Р.</div>
+											</div>
+
+											<div class="card-horizontal__stocks">
+												<span>Скидка 20%</span>
+											</div>
+											<a href="" class="btn">Узнать больше</a>
+											<a href="" class="fast-buy">Купить в один клик</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+				<div class="catalog-bar border-bottom uk-text-center">
+					<a href="#" class="show-more-item icon-repeat">Показать еще</a>
+				</div>
+
+				<div class="catalog-bar">
+					{% include "../includes/components/pagination.twig" %}
+				</div>
+			</section>
+		</div>
+	</div>
+
+{% endblock %}

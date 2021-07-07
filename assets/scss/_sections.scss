@@ -15,7 +15,10 @@
   }
 
   &__inner {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
+    @media (min-width: $tablet-w) {
+      padding-bottom: 80px;
+    }
     border-bottom: 1px solid $black;
   }
 }
@@ -127,6 +130,25 @@
   .short-cards-list {
     &:after {
       display: none;
+    }
+  }
+}
+
+.brand-detail-section {
+  &__info {
+    @media (min-width: $mob-s) {
+      padding-right: 13%;
+    }
+  }
+
+  &__desc {
+    margin-top: 40px;
+
+    @media (min-width: $mob-s) {
+      margin-top: 0;
+      padding-left: 13%;
+      height: 100%;
+      border-left: 1px solid $mediumGray;
     }
   }
 }

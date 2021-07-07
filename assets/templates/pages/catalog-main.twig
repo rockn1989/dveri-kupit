@@ -109,7 +109,7 @@
 							<li class="divider-list__item-wrapper">
 								<div class="brand-item">
 									<div class="brand-item__inner">
-										<div class="brand-item__img"></div>
+										<picture class="brand-item__img"></picture>
 										<div class="brand-item__desc">
 											<a href="" class="brand-item__title">Фабрика ЗИОН</a>
 											<div class="brand-item__count">16 товаров</div>
@@ -121,9 +121,11 @@
 							<li class="divider-list__item-wrapper">
 								<div class="brand-item">
 									<div class="brand-item__inner">
-										<div class="brand-item__img">
+										<picture class="brand-item__img">
+											<source srcset="img/media/webp/brand-preview-img-{{i}}.webp" type="image/webp">
+											<source srcset="img/media/brands/brand-preview-img-{{i}}.png" type="image/png">
 											<img src="img/media/brands/brand-preview-img-{{i}}.png" alt="" loading="lazy">
-										</div>
+										</picture>
 										<div class="brand-item__desc">
 											<a href="" class="brand-item__title">{{subMenu[i - 1].name}}</a>
 											<div class="brand-item__count">{{subMenu[i - 1].count}}</div>
