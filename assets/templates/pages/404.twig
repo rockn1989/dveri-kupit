@@ -1,0 +1,182 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "404" %}
+{% set bread = ['Главная', '404'] %}
+{% set subMenu = [
+  {count: '56 товаров',name:"Фабрика ЗИОН"},
+  {count: '112 товаров',name:"Фабрика ГРИФФОН"},
+  {count: '23 товаров',name:"Фабрика МАСТЕР-СТАЛЬ"},
+  {count: '7 товаров',name:"Фабрика  Промет"},
+  {count: '212 товаров',name:"Фабрика ТРЕЙД-МАРК"},
+  {count: '7 товаров',name:"Фабрика Porte Vista"},
+  {count: '289 товаров',name:"Фабрика URBAN ECO"},
+  {count: '16 товаров',name:"Фабрика INTERIO-DOORS"},
+  {count: '16 товаров',name:"Фабрика REGIDOORS"},
+  {count: '14 товаров',name:"ФАБРИКА ПП Эмалит"},
+  {count: '12 товаров',name:"Фабрика СТРАТЕГИЯ"},
+  {count: '4 789 товаров',name:"Фабрика UBERTURE"},
+] %}
+
+{% block content %}
+
+	<section
+		class="page-not-found">
+		<!-- brand-detail-section -->
+		<div class="brand-detail-section">
+			<div class="container">
+
+				<div class="uk-margin-large-bottom">
+					<div class="container">
+						<div class="uk-grid">
+							<div class="uk-width-1-3@s">
+								<div class="brand-detail-section__info">
+									<h1 class="title-h1">Ошибка 404</h1>
+								</div>
+
+							</div>
+							<div class="uk-width-expand@s">
+								<div class="brand-detail-section__desc">
+									<p>
+										Неправильно набран адрес, или такой страницы на сайте больше не существует.
+									</p>
+
+									<p>
+										Вернитесь на главную или воспользуйтесь поиском по сайту. Все наши товары и бренды вы можете найти по ссылкам ниже.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- brand-detail-section -->
+
+		<!-- begin catalog-main -->
+		<section class="catalog-main">
+			<div class="container">
+				<div class="short-card-list-wrapper">
+					<ul class="short-cards-list uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l" uk-grid>
+						<li class="short-cards-list__item-wrapper">
+							<div class="short-card">
+								<div class="short-card__img">
+									<figure>
+										<picture>
+											<source srcset="img/media/webp/catalog-main-img-1.webp" type="image/webp">
+											<source srcset="img/media/catalog/catalog-main-img-1.png" type="image/png">
+											<img src="img/media/catalog/catalog-main-img-1.png" width="325" height="252" alt="" loading="lazy">
+										</picture>
+									</figure>
+								</div>
+								<div class="short-card__desc">
+									<a href="" class="short-card__title">входные двери</a>
+									<div class="short-card__count">145 товаров</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="short-cards-list__item-wrapper">
+							<div class="short-card">
+								<div class="short-card__img">
+									<figure>
+										<picture>
+											<source srcset="img/media/webp/catalog-main-img-2.webp" type="image/webp">
+											<source srcset="img/media/catalog/catalog-main-img-2.png" type="image/png">
+											<img src="img/media/catalog/catalog-main-img-2.png" width="325" height="252" alt="" loading="lazy">
+										</picture>
+									</figure>
+								</div>
+								<div class="short-card__desc">
+									<a href="" class="short-card__title">Межкомнатные двери</a>
+									<div class="short-card__count">206 товаров</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="short-cards-list__item-wrapper">
+							<div class="short-card">
+								<div class="short-card__img">
+									<figure>
+										<picture>
+											<source srcset="img/media/webp/catalog-main-img-3.webp" type="image/webp">
+											<source srcset="img/media/catalog/catalog-main-img-3.png" type="image/png">
+											<img src="img/media/catalog/catalog-main-img-3.png" width="325" height="252" alt="" loading="lazy">
+										</picture>
+									</figure>
+								</div>
+								<div class="short-card__desc">
+									<a href="" class="short-card__title">комлектующие к дверям</a>
+									<div class="short-card__count">1 189 товаров</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="short-cards-list__item-wrapper">
+							<div class="short-card">
+								<div class="short-card__img">
+									<figure>
+										<picture>
+											<source srcset="img/media/webp/catalog-main-img-4.webp" type="image/webp">
+											<source srcset="img/media/catalog/catalog-main-img-4.png" type="image/png">
+											<img src="img/media/catalog/catalog-main-img-4.png" width="325" height="252" alt="" loading="lazy">
+										</picture>
+									</figure>
+								</div>
+								<div class="short-card__desc">
+									<a href="" class="short-card__title">фурнитура</a>
+									<div class="short-card__count">4 578 товаров</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<a href="" class="show-more icon-chevron-right">Показать все</a>
+				</div>
+
+				<div class="brands-list">
+					<h2 class="title-h2">Бренды</h2>
+
+					<ul class="divider-list uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+
+						{% for i in 1..12 %}
+							{% if i == 10 %}
+								<li class="divider-list__item-wrapper">
+									<div class="brand-item">
+										<div class="brand-item__inner">
+											<picture class="brand-item__img"></picture>
+											<div class="brand-item__desc">
+												<a href="" class="brand-item__title">Фабрика ЗИОН</a>
+												<div class="brand-item__count">16 товаров</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							{% else %}
+								<li class="divider-list__item-wrapper">
+									<div class="brand-item">
+										<div class="brand-item__inner">
+											<picture class="brand-item__img">
+												<source srcset="img/media/webp/brand-preview-img-{{i}}.webp" type="image/webp">
+												<source srcset="img/media/brands/brand-preview-img-{{i}}.png" type="image/png">
+												<img src="img/media/brands/brand-preview-img-{{i}}.png" alt="" loading="lazy">
+											</picture>
+											<div class="brand-item__desc">
+												<a href="" class="brand-item__title">{{subMenu[i - 1].name}}</a>
+												<div class="brand-item__count">{{subMenu[i - 1].count}}</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							{% endif %}
+						{% endfor %}
+
+					</ul>
+
+					<a href="" class="show-more icon-chevron-right">Показать все</a>
+				</div>
+			</div>
+		</section>
+		<!-- end catalog-main -->
+
+	</section>
+{% endblock %}
