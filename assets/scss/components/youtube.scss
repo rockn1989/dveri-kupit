@@ -1,8 +1,11 @@
 .youtube {
   position: relative;
   height: 0;
-  padding-bottom: 81.5%;
+  padding-bottom: 56.5%;
   cursor: pointer;
+  &--small {
+    padding-bottom: 81.5%;
+  }
   img {
     position: absolute;
     top: 0;

@@ -1,6 +1,18 @@
 {% extends "../layouts/main.twig" %}
 {% set title = "Фабрика Fortezza" %}
 {% set bread = ['Главная', 'Бренды', 'Фабрика Fortezza'] %}
+{% set colors = [
+  '#D7D7D7',
+  '#888279',
+  '#3C2821',
+  '#83888C',
+  '#833435',
+  '#ffffff',
+  '#35261D',
+  '#804423',
+  '#804423',
+  '#804423',
+] %}
 
 {% block content %}
 
@@ -52,7 +64,7 @@
 
 								{% if i == 3 %}
 									<div class="slide">
-										<div class="youtube" data-embed="WqZZppQd87M">
+										<div class="youtube youtube--small" data-embed="WqZZppQd87M">
 											<div class="play-btn icon-play"></div>
 											<div class="youtube__title">
 												Посмотрите как мы летаем в москве</div>
