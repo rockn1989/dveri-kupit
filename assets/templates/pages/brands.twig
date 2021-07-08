@@ -1,0 +1,66 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Каталог" %}
+{% set bread = ['Главная', 'Каталог'] %}
+
+{% set subMenu = [
+  {count: '56 товаров',name:"Фабрика ЗИОН"},
+  {count: '112 товаров',name:"Фабрика ГРИФФОН"},
+  {count: '23 товаров',name:"Фабрика МАСТЕР-СТАЛЬ"},
+  {count: '7 товаров',name:"Фабрика  Промет"},
+  {count: '212 товаров',name:"Фабрика ТРЕЙД-МАРК"},
+  {count: '7 товаров',name:"Фабрика Porte Vista"},
+  {count: '289 товаров',name:"Фабрика URBAN ECO"},
+  {count: '16 товаров',name:"Фабрика INTERIO-DOORS"},
+  {count: '16 товаров',name:"Фабрика REGIDOORS"},
+  {count: '14 товаров',name:"ФАБРИКА ПП Эмалит"},
+  {count: '12 товаров',name:"Фабрика СТРАТЕГИЯ"},
+  {count: '4 789 товаров',name:"Фабрика UBERTURE"},
+] %}
+
+{% block content %}
+	<!-- begin section-brands -->
+	<section class="section-brands">
+		<div class="container">
+			<div class="brands-list">
+				<h1 class="title-h1">Бренды</h1>
+
+				<ul class="divider-list uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-collapse" uk-grid>
+
+					{% for i in 1..12 %}
+						{% if i == 10 %}
+							<li class="divider-list__item-wrapper">
+								<div class="brand-item">
+									<div class="brand-item__inner">
+										<picture class="brand-item__img"></picture>
+										<div class="brand-item__desc">
+											<a href="" class="brand-item__title">Фабрика ЗИОН</a>
+											<div class="brand-item__count">16 товаров</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						{% else %}
+							<li class="divider-list__item-wrapper">
+								<div class="brand-item">
+									<div class="brand-item__inner">
+										<picture class="brand-item__img">
+											<source srcset="img/media/webp/brand-preview-img-{{i}}.webp" type="image/webp">
+											<source srcset="img/media/brands/brand-preview-img-{{i}}.png" type="image/png">
+											<img src="img/media/brands/brand-preview-img-{{i}}.png" alt="" loading="lazy">
+										</picture>
+										<div class="brand-item__desc">
+											<a href="" class="brand-item__title">{{subMenu[i - 1].name}}</a>
+											<div class="brand-item__count">{{subMenu[i - 1].count}}</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						{% endif %}
+					{% endfor %}
+
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end section-brands -->
+{% endblock %}
