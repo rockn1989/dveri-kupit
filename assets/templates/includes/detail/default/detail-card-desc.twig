@@ -79,12 +79,12 @@
 				{% if j == 5 %}
 					<label for="{{j}}_{{colors[j]}}-f" class="color-checkbox" uk-tooltip="title: {{colors[j]}}; pos: right">
 						<input id="{{j}}_{{colors[j]}}-f" type="checkbox" value="" checked>
-						<span class="custom-checkbox" style="background-color: {{colors[j]}}" uk-toggle="#colors-fur-modal"></span>
+						<span class="custom-checkbox" style="background-color: {{colors[j]}}"></span>
 					</label>
 				{% else %}
 					<label for="{{j}}_{{colors[j]}}-f" class="color-checkbox" uk-tooltip="title: {{colors[j]}}; pos: right">
 						<input id="{{j}}_{{colors[j]}}-f" type="checkbox" value="">
-						<span class="custom-checkbox" style="background-color: {{colors[j]}}" uk-toggle="#colors-fur-modal"></span>
+						<span class="custom-checkbox" style="background-color: {{colors[j]}}"></span>
 					</label>
 				{% endif %}
 			{% endfor %}
