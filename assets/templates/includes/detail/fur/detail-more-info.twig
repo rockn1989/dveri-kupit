@@ -1,0 +1,258 @@
+{% set colors = [
+  '#D7D7D7',
+  '#888279',
+  '#3C2821',
+  '#83888C',
+  '#833435',
+  '#ffffff',
+  '#35261D',
+  '#804423',
+  '#804423',
+  '#804423',
+] %}
+
+{% block content %}
+
+	<section id="detail-info" class="section-default detail-info">
+		<div class="container">
+			<div class="section-default__inner">
+				<div class="uk-grid">
+					<div class="uk-width-expand@m">
+						<ul class="tabs" uk-switcher>
+							<li class="uk-active">
+								<a href="#">Свойства товара</a>
+							</li>
+							<li>
+								<a href="#">Описание</a>
+							</li>
+							<li>
+								<a href="#">Отзывы (<span class="count">2</span>)</a>
+							</li>
+						</ul>
+
+						<ul class="uk-switcher">
+							<li>
+								<div class="overflow-x-container">
+									<table class="detail-table">
+										<tr>
+											<td>Производитель</td>
+											<td>Regidoors</td>
+										</tr>
+										<tr>
+											<td>Модель ручки</td>
+											<td>V 07AL</td>
+										</tr>
+										<tr>
+											<td>Поставщик фурнитуры</td>
+											<td>VANTAGE</td>
+										</tr>
+										<tr>
+											<td>Цвет фурнитуры</td>
+											<td>D мат. никель</td>
+										</tr>
+									</table>
+								</div>
+							</li>
+							<li>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas quibusdam qui obcaecati animi laborum est consequuntur. Non, aliquam adipisci.</p>
+							</li>
+							<li>
+								{% include "../../components/reviews.twig" %}
+							</li>
+						</ul>
+					</div>
+					<div class="uk-width-1-4@m">
+						<aside class="promo-info" uk-sticky="bottom: #detail-info">
+							<div class="brand-info-card">
+								<picture class="brand-info-card__img">
+									<img src="img/media/brands/brand-preview-img-6.png" width="117" height="70" alt="Porte Vista" loading="lazy">
+								</picture>
+								<div class="brand-info-card__title">
+									<a href="">Фабрика PORTE VISTA</a>
+									<div class="small-gray-title">7 товаров</div>
+								</div>
+
+								<ul class="brand-info-card__list-links">
+									<li>
+										<a href="">Все товары категории</a>
+									</li>
+									<li>
+										<a href="">Все товары бренда</a>
+									</li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- begin section-default -->
+	<section class="section-default">
+		<div class="container">
+			<div class="section-default__inner">
+				<h2>Фурнитура этой серии</h2>
+
+				<!-- begin product-slider -->
+				<div class="product-slider black-theme">
+					<div class="container">
+						<div class="slider">
+
+							<div class="slide">
+								<div class="short-card short-card--center-mode">
+									<div class="short-card__img">
+										<figure>
+											<picture>
+												<source srcset="img/media/webp/fur-1.webp" type="image/webp">
+												<source srcset="img/media/sliders/fur-1.png" type="image/png">
+												<img src="img/media/sliders/fur-1.png" width="253" height="253" alt="" loading="lazy">
+											</picture>
+										</figure>
+									</div>
+									<div class="short-card__desc">
+										<a href="" class="short-card__title">Uno Art Line</a>
+										<div class="short-card__count">от 9 870 Р.</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide">
+								<div class="short-card short-card--center-mode">
+									<div class="short-card__img">
+										<figure>
+											<picture>
+												<source srcset="img/media/webp/fur-1.webp" type="image/webp">
+												<source srcset="img/media/sliders/fur-1.png" type="image/png">
+												<img src="img/media/sliders/fur-1.png" width="253" height="253" alt="" loading="lazy">
+											</picture>
+										</figure>
+									</div>
+									<div class="short-card__desc">
+										<a href="" class="short-card__title">Uno Art Line</a>
+										<div class="short-card__count">от 9 870 Р.</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide">
+								<div class="short-card short-card--center-mode">
+									<div class="short-card__img">
+										<figure>
+											<picture>
+												<source srcset="img/media/webp/fur-2.webp" type="image/webp">
+												<source srcset="img/media/sliders/fur-2.png" type="image/png">
+												<img src="img/media/sliders/fur-2.png" width="253" height="253" alt="" loading="lazy">
+											</picture>
+										</figure>
+									</div>
+									<div class="short-card__desc">
+										<a href="" class="short-card__title">Uno Art Line</a>
+										<div class="short-card__count">от 9 870 Р.</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide">
+								<div class="short-card short-card--center-mode">
+									<div class="short-card__img">
+										<figure>
+											<picture>
+												<source srcset="img/media/webp/fur-3.webp" type="image/webp">
+												<source srcset="img/media/sliders/fur-3.png" type="image/png">
+												<img src="img/media/sliders/fur-3.png" width="253" height="253" alt="" loading="lazy">
+											</picture>
+										</figure>
+									</div>
+									<div class="short-card__desc">
+										<a href="" class="short-card__title">Uno Art Line</a>
+										<div class="short-card__count">от 9 870 Р.</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide">
+								<div class="short-card short-card--center-mode">
+									<div class="short-card__img">
+										<figure>
+											<picture>
+												<source srcset="img/media/webp/fur-4.webp" type="image/webp">
+												<source srcset="img/media/sliders/fur-4.png" type="image/png">
+												<img src="img/media/sliders/fur-4.png" width="253" height="253" alt="" loading="lazy">
+											</picture>
+										</figure>
+									</div>
+									<div class="short-card__desc">
+										<a href="" class="short-card__title">Uno Art Line</a>
+										<div class="short-card__count">от 9 870 Р.</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slide">
+								<div class="short-card short-card--center-mode">
+									<div class="short-card__img">
+										<figure>
+											<picture>
+												<source srcset="img/media/webp/fur-1.webp" type="image/webp">
+												<source srcset="img/media/sliders/fur-1.png" type="image/png">
+												<img src="img/media/sliders/fur-1.png" width="253" height="253" alt="" loading="lazy">
+											</picture>
+										</figure>
+									</div>
+									<div class="short-card__desc">
+										<a href="" class="short-card__title">Uno Art Line</a>
+										<div class="short-card__count">от 9 870 Р.</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- end product-slider -->
+
+			</div>
+		</div>
+	</section>
+	<!-- end section-default -->
+
+	<!-- begin news-list -->
+	<div class="news-list">
+		<div class="uk-grid">
+			<div class="uk-width-3-5@s">
+				<article class="post post--big">
+					<figure>
+						<picture class="post__img">
+							<source srcset="img/media/webp/news-img-1.webp" type="image/webp">
+							<source srcset="img/media/news-img-1.png" type="image/png">
+							<img src="img/media/news-img-1.png" width="670" height="410" alt="Лучшие цены" loading="lazy">
+						</picture>
+					</figure>
+					<div class="post__desc">
+						<a href="" class="post__title">Сделаем скидку. Гарантия лучшей цены!</a>
+						<div class="post__date">до 31 декабря</div>
+					</div>
+				</article>
+			</div>
+			<div class="uk-width-2-5@s">
+				<article class="post">
+					<figure>
+						<picture class="post__img">
+							<source srcset="img/media/webp/news-img-2.webp" type="image/webp">
+							<source srcset="img/media/news-img-2.png" type="image/png">
+							<img src="img/media/news-img-2.png" width="540" height="350" alt="Лучшие цены" loading="lazy">
+						</picture>
+					</figure>
+					<div class="post__desc">
+						<a href="" class="post__title">Новая марка, новые цены!</a>
+						<div class="post__date">14 июля—18 сентбря</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+	<!-- end news-list -->
+
+{% endblock %}

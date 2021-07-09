@@ -83,4 +83,10 @@
       background-color: $darkGray;
     }
   }
+
+  &.black-theme {
+    svg {
+      color: $black;
+    }
+  }
 }

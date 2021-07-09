@@ -28,8 +28,6 @@
 }
 
 .doors-image-wrapper {
-  margin-bottom: 30px;
-
   a {
     display: flex;
     justify-content: center;
@@ -37,6 +35,7 @@
 }
 
 .door-colors-wrapper {
+  margin-top: 30px;
   .select2-container {
     margin-bottom: 20px;
 
@@ -62,6 +61,39 @@
 
   .slide {
     padding: 0 1px;
+
+    img {
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  picture {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    position: relative;
+    background-color: $white;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(131, 141, 155, 0.07);
+      z-index: 100;
+    }
+
+    @media (min-width: $mob-s) {
+      min-height: 400px;
+      max-height: 460px;
+    }
   }
 }
 
@@ -84,12 +116,30 @@
     width: 82px !important;
     min-height: 100px;
     picture {
-      padding: 11px 20px;
+      padding: 11px 5px;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2px solid transparent;
+      border: 2px solid $gray;
+      position: relative;
+      background-color: $white;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgba(131, 141, 155, 0.07);
+        z-index: 100;
+      }
+      img {
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
 
     &.slick-current {

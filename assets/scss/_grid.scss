@@ -91,6 +91,11 @@
   padding-top: 20px;
 }
 
+.overflow-x-container {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
 @media (min-width: $desk-w) {
   .uk-margin-large-bottom {
     margin-bottom: 80px !important;

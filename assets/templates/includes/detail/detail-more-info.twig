@@ -19,84 +19,86 @@
 
 						<ul class="uk-switcher">
 							<li>
-								<table class="detail-table">
-									<tr>
-										<td>Производитель</td>
-										<td>Regidoors, г. Йошкар-Ола</td>
-									</tr>
-									<tr>
-										<td>Размер дверного блока</td>
-										<td>2045х900 / 2045х980</td>
-									</tr>
-									<tr>
-										<td>Толщина полотна мм.</td>
-										<td>97-117</td>
-									</tr>
-									<tr>
-										<td>Толщина листа металла мм.</td>
-										<td>1.5</td>
-									</tr>
-									<tr>
-										<td>Класс прочности</td>
-										<td>М4</td>
-									</tr>
-									<tr>
-										<td>Значение по эксплутационным характеристикам</td>
-										<td>Класс 1</td>
-									</tr>
-									<tr>
-										<td>Класс устойчивости к взлому</td>
-										<td>Класс устойчивости к взлому</td>
-									</tr>
-									<tr>
-										<td>Количество петель</td>
-										<td>3</td>
-									</tr>
-									<tr>
-										<td>Противосъемы</td>
-										<td>2</td>
-									</tr>
-									<tr>
-										<td>Регулировка прижима</td>
-										<td>да</td>
-									</tr>
-									<tr>
-										<td>Короб</td>
-										<td>Закрытый, утеплённый. 115х60 мм.</td>
-									</tr>
-									<tr>
-										<td>Вылет наличника от короба</td>
-										<td>80</td>
-									</tr>
-									<tr>
-										<td>Крепление</td>
-										<td>На уши</td>
-									</tr>
-									<tr>
-										<td>Утеплитель</td>
-										<td>Базальтовая плита</td>
-									</tr>
-									<tr>
-										<td>Усиление замковой зоны</td>
-										<td>1,5 мм</td>
-									</tr>
-									<tr>
-										<td>Ночная задвижка</td>
-										<td>Да</td>
-									</tr>
-									<tr>
-										<td>Терморазрыв</td>
-										<td>нет</td>
-									</tr>
-									<tr>
-										<td>Усиление замковой зоны</td>
-										<td>Да</td>
-									</tr>
-									<tr>
-										<td>Вес двери</td>
-										<td>11 289 г</td>
-									</tr>
-								</table>
+								<div class="overflow-x-container">
+									<table class="detail-table">
+										<tr>
+											<td>Производитель</td>
+											<td>Regidoors, г. Йошкар-Ола</td>
+										</tr>
+										<tr>
+											<td>Размер дверного блока</td>
+											<td>2045х900 / 2045х980</td>
+										</tr>
+										<tr>
+											<td>Толщина полотна мм.</td>
+											<td>97-117</td>
+										</tr>
+										<tr>
+											<td>Толщина листа металла мм.</td>
+											<td>1.5</td>
+										</tr>
+										<tr>
+											<td>Класс прочности</td>
+											<td>М4</td>
+										</tr>
+										<tr>
+											<td>Значение по эксплутационным характеристикам</td>
+											<td>Класс 1</td>
+										</tr>
+										<tr>
+											<td>Класс устойчивости к взлому</td>
+											<td>Класс устойчивости к взлому</td>
+										</tr>
+										<tr>
+											<td>Количество петель</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>Противосъемы</td>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>Регулировка прижима</td>
+											<td>да</td>
+										</tr>
+										<tr>
+											<td>Короб</td>
+											<td>Закрытый, утеплённый. 115х60 мм.</td>
+										</tr>
+										<tr>
+											<td>Вылет наличника от короба</td>
+											<td>80</td>
+										</tr>
+										<tr>
+											<td>Крепление</td>
+											<td>На уши</td>
+										</tr>
+										<tr>
+											<td>Утеплитель</td>
+											<td>Базальтовая плита</td>
+										</tr>
+										<tr>
+											<td>Усиление замковой зоны</td>
+											<td>1,5 мм</td>
+										</tr>
+										<tr>
+											<td>Ночная задвижка</td>
+											<td>Да</td>
+										</tr>
+										<tr>
+											<td>Терморазрыв</td>
+											<td>нет</td>
+										</tr>
+										<tr>
+											<td>Усиление замковой зоны</td>
+											<td>Да</td>
+										</tr>
+										<tr>
+											<td>Вес двери</td>
+											<td>11 289 г</td>
+										</tr>
+									</table>
+								</div>
 							</li>
 							<li>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas quibusdam qui obcaecati animi laborum est consequuntur. Non, aliquam adipisci.</p>
@@ -151,5 +153,41 @@
 
 	{% include "../sections/similar-section.twig" %}
 	{% include "../sections/similar-section-slider.twig" %}
-	{% include "../components/news-list.twig" %}
+	<!-- begin news-list -->
+	<div class="news-list">
+		<div class="uk-grid">
+			<div class="uk-width-3-5@s">
+				<article class="post post--big">
+					<figure>
+						<picture class="post__img">
+							<source srcset="img/media/webp/news-img-1.webp" type="image/webp">
+							<source srcset="img/media/news-img-1.png" type="image/png">
+							<img src="img/media/news-img-1.png" width="670" height="410" alt="Лучшие цены" loading="lazy">
+						</picture>
+					</figure>
+					<div class="post__desc">
+						<a href="" class="post__title">Сделаем скидку. Гарантия лучшей цены!</a>
+						<div class="post__date">до 31 декабря</div>
+					</div>
+				</article>
+			</div>
+			<div class="uk-width-2-5@s">
+				<article class="post">
+					<figure>
+						<picture class="post__img">
+							<source srcset="img/media/webp/news-img-2.webp" type="image/webp">
+							<source srcset="img/media/news-img-2.png" type="image/png">
+							<img src="img/media/news-img-2.png" width="540" height="350" alt="Лучшие цены" loading="lazy">
+						</picture>
+					</figure>
+					<div class="post__desc">
+						<a href="" class="post__title">Новая марка, новые цены!</a>
+						<div class="post__date">14 июля—18 сентбря</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+	<!-- end news-list -->
+
 {% endblock %}
