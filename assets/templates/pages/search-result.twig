@@ -1,0 +1,195 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Результат поиска" %}
+{% set bread = ['Главная', 'Результат поиска'] %}
+{% set colors = [
+  '#D7D7D7',
+  '#888279',
+  '#3C2821',
+  '#83888C',
+  '#833435',
+  '#ffffff',
+  '#35261D',
+  '#804423',
+  '#804423',
+  '#804423',
+] %}
+
+{% block content %}
+
+	<!-- begin section-search-result -->
+	<section class="section-search-result">
+		<div class="container">
+			<h1 class="title-h1">Результат поиска по запросу</h1>
+			<div class="h-panel border-bottom uk-margin-medium-bottom">
+				<div class="uk-grid">
+					<div class="uk-width-1-2">
+						<div class="search-result-text">
+							<p>
+								По запросу
+								<span class="blue">«Двери»</span>
+								было найдено
+								<span class="blue">25 результатов</span>
+								в
+								<span class="blue">2 категориях</span>.</p>
+						</div>
+
+					</div>
+					<div class="uk-width-1-2">
+						<a href="#search-modal" class="btn" uk-toggle>Новый поиск</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="search-result-match">
+				<ul class="tabs" uk-switcher>
+					<li class="uk-active">
+						<a href="#">входные двери</a>
+					</li>
+					<li>
+						<a href="#">Фурнитура</a>
+					</li>
+				</ul>
+
+				<ul class="uk-switcher">
+					<li>
+						<div class="catalog-body__list grid-view">
+
+							{% for i in 1..12 %}
+
+								<div class="card">
+									<div class="card__inner">
+										<div class="card__header">
+											<a href="">
+												<picture class="card__img">
+													<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+													<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+													<img src="img/media/sliders/product-slide-1.png" width="117" height="285" alt="" loading="lazy">
+												</picture>
+											</a>
+
+											<div class="stocks">
+												<div class="stocks__sale">sale</div>
+												<div class="stocks__hit">hit</div>
+											</div>
+											<div class="add-favorite">
+												<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+												<a href="" class="icon-fav-fill uk-hidden"></a>
+											</div>
+
+											<div class="colors-list">
+												{% for i in 0..9 %}
+													<label for="{{i}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
+														<input id="{{i}}" type="checkbox" value="">
+														<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+													</label>
+												{% endfor %}
+												<a href="" class="round-plus icon-plus" uk-tooltip="title: Более 20 цветов; pos: right"></a>
+											</div>
+
+											<ul class="card__settings">
+												<li>Стандарт</li>
+												<li>Со сменными панелями</li>
+												<li>Взломостойкая</li>
+											</ul>
+										</div>
+
+										<div class="card__body">
+											<div class="card__title">
+												<a href="">Uno Art Line</a>
+											</div>
+											<div class="card__desc">
+												<div class="card__price">
+													<div class="card__price-old">от 9 870 Р.</div>
+													<div class="card__price-current">от 6 870 Р.</div>
+												</div>
+												<div class="card__stocks">Скидка 50%</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+
+						</div>
+						<div class="h-panel border-vertical uk-text-center">
+							<a href="#" class="show-more-item icon-repeat">Показать еще</a>
+						</div>
+
+						<div class="h-panel">
+							{% include "../includes/components/pagination.twig" %}
+						</div>
+					</li>
+					<li>
+						<div class="catalog-body__list grid-view">
+
+							{% for i in 1..4 %}
+
+								<div class="card">
+									<div class="card__inner">
+										<div class="card__header">
+											<a href="">
+												<picture class="card__img">
+													<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+													<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+													<img src="img/media/sliders/product-slide-1.png" width="117" height="285" alt="" loading="lazy">
+												</picture>
+											</a>
+
+											<div class="stocks">
+												<div class="stocks__sale">sale</div>
+												<div class="stocks__hit">hit</div>
+											</div>
+											<div class="add-favorite">
+												<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+												<a href="" class="icon-fav-fill uk-hidden"></a>
+											</div>
+
+											<div class="colors-list">
+												{% for i in 0..9 %}
+													<label for="{{i}}" class="color-checkbox" uk-tooltip="title: {{colors[i]}}; pos: right">
+														<input id="{{i}}" type="checkbox" value="">
+														<span class="custom-checkbox" style="background-color: {{colors[i]}}"></span>
+													</label>
+												{% endfor %}
+												<a href="" class="round-plus icon-plus" uk-tooltip="title: Более 20 цветов; pos: right"></a>
+											</div>
+
+											<ul class="card__settings">
+												<li>Стандарт</li>
+												<li>Со сменными панелями</li>
+												<li>Взломостойкая</li>
+											</ul>
+										</div>
+
+										<div class="card__body">
+											<div class="card__title">
+												<a href="">Uno Art Line</a>
+											</div>
+											<div class="card__desc">
+												<div class="card__price">
+													<div class="card__price-old">от 9 870 Р.</div>
+													<div class="card__price-current">от 6 870 Р.</div>
+												</div>
+												<div class="card__stocks">Скидка 50%</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+
+						</div>
+						<div class="h-panel border-vertical uk-text-center">
+							<a href="#" class="show-more-item icon-repeat">Показать еще</a>
+						</div>
+
+						<div class="h-panel">
+							{% include "../includes/components/pagination.twig" %}
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end section-search-result -->
+
+{% endblock %}

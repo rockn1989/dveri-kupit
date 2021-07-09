@@ -83,6 +83,14 @@
   border-bottom: 1px solid $mediumGray;
 }
 
+.uk-padding-small-bottom {
+  padding-bottom: 20px;
+}
+
+.uk-padding-small-top {
+  padding-top: 20px;
+}
+
 @media (min-width: $desk-w) {
   .uk-margin-large-bottom {
     margin-bottom: 80px !important;
