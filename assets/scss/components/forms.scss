@@ -379,7 +379,7 @@
     resize: vertical;
   }
 
-  label {
+  label:not([class]) {
     display: block;
     color: $darkGray;
     font-size: 14px;
@@ -405,5 +405,22 @@
     color: $black;
     font-size: 14px;
     line-height: 16px;
+  }
+}
+
+.btns-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: $mob-s) {
+    justify-content: space-between;
+  }
+  & > * {
+    margin: 0 5px 10px;
+
+    @media (min-width: $mob-s) {
+      margin: 0;
+    }
   }
 }

@@ -1,0 +1,23 @@
+{% extends "./default-modal.twig" %}
+{% set modal = {id: 'callback-modal', class: 'callback-modal', title: 'Заказать звонок'} %}
+
+{% block content %}
+
+	<form action="" class="default-form">
+		<div class="form-group form-group--lg">
+			<label for="cb-name">Ваше имя</label>
+			<input id="cb-name" type="text" placeholder="Иванов Иван">
+		</div>
+		<div class="form-group form-group--lg">
+			<label for="cb-tel">Телефон</label>
+			<input id="cb-tel" type="text" class="js__input-mask" placeholder="+7 (    )">
+		</div>
+
+		<button type="submit" class="btn btn--lg">Отправить</button>
+	</form>
+
+	<div class="politics">
+		Нажимая на кнопку отправить, я даю согласие на обработку
+		<a href="/politics/">Персональных данных</a>
+	</div>
+{% endblock %}

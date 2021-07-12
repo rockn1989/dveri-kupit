@@ -1,0 +1,14 @@
+<div id="{{modal.id}}" class="notification-modal {{modal.class}}" uk-modal>
+
+	<div class="uk-modal-dialog">
+		<div class="container">
+			<div class="uk-modal-header">
+				<div class="title-h2">{{modal.title}}</div>
+				<button class="uk-modal-close" type="button" uk-close></button>
+			</div>
+			<div class="uk-modal-body"> {% block content %}{% endblock content %}
+				</div>
+			</div>
+		</div>
+
+	</div>

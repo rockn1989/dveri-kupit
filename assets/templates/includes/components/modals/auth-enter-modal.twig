@@ -1,0 +1,27 @@
+{% extends "./default-modal.twig" %}
+{% set modal = {id: 'auth-enter-modal', class: 'auth-enter-modal', title: 'Войти'} %}
+
+{% block content %}
+
+	<form action="" class="default-form">
+		<div class="form-group form-group--lg">
+			<label for="auth-email">Email</label>
+			<input id="auth-email" type="email" placeholder="Email" required>
+		</div>
+		<div class="form-group form-group--lg">
+			<label for="auth-pass">Пароль</label>
+			<input id="auth-pass" type="password" placeholder="*******">
+			<a href="" class="blue  uk-display-block uk-margin-small-top">Забыли пароль?</a>
+		</div>
+
+		<div class="btns-wrapper">
+			<button type="submit" class="btn btn--lg">Войти</button>
+			<a href="" class="btn btn--white">Зарегистрироваться</a>
+		</div>
+	</form>
+
+	<div class="politics">
+		Нажимая на кнопку отправить, я даю согласие на обработку
+		<a href="/politics/">Персональных данных</a>
+	</div>
+{% endblock %}

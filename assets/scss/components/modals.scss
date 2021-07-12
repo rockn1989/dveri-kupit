@@ -51,6 +51,76 @@
 
   .default-form,
   .politics {
-    max-width: 440px;
+    @media (min-width: $mob-s) {
+      max-width: 440px;
+    }
+  }
+
+  .btns-wrapper {
+    & > * {
+      flex-basis: 210px;
+    }
+  }
+}
+
+.notification-modal {
+  padding: 0;
+
+  .uk-modal-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 335px !important;
+    width: 100%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $mob-s) {
+      max-width: 440px !important;
+    }
+  }
+
+  .uk-modal-header {
+    padding: 40px 0 0;
+    border: none;
+
+    @media (min-width: $mob-s) {
+      padding: 40px 15px 0;
+    }
+  }
+
+  .uk-modal-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    svg {
+      width: 21px;
+      height: 21px;
+      color: $black;
+    }
+  }
+
+  .uk-modal-body {
+    padding: 0 0 20px;
+    @media (min-width: $mob-s) {
+      padding: 0 15px 40px;
+    }
+  }
+
+  .title-h2 {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: unset;
+    font-weight: 400;
+  }
+
+  &.uk-open {
+    .uk-modal-dialog {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
   }
 }

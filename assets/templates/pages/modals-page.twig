@@ -1,0 +1,48 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Техническая страница" %}
+{% set bread = ['Главная', 'Все модальные окна'] %}
+
+{% block content %}
+	<section class="section-default">
+		<div class="container">
+			<ul class="uk-grid uk-child-width-1-2@s uk-grid uk-child-width-1-4@m" uk-grid>
+				<li>
+					<a href="#search-modal" class="btn btn--lg" uk-toggle>Поиск</a>
+				</li>
+				<li>
+					<a href="#review-modal" class="btn btn--lg" uk-toggle>Оставить отзыв</a>
+				</li>
+				<li>
+					<a href="#fast-order" class="btn btn--lg" uk-toggle>Заказ в 1 клик</a>
+				</li>
+				<li>
+					<a href="#call-spec" class="btn btn--lg" uk-toggle>Вызвать замерщика</a>
+				</li>
+				<li>
+					<a href="#callback-modal" class="btn btn--lg" uk-toggle>Заказать звонок</a>
+				</li>
+				<li>
+					<a href="#colors-panel-modal" class="btn btn--lg" uk-toggle>Выберите панель</a>
+				</li>
+				<li>
+					<a href="#colors-fur-modal" class="btn btn--lg" uk-toggle>Цвет фурнитуры</a>
+				</li>
+				<li>
+					<a href="#auth-enter-modal" class="btn btn--lg" uk-toggle>Авторизация</a>
+				</li>
+				<li>
+					<a href="#auth-reg-modal" class="btn btn--lg" uk-toggle>Регистрация</a>
+				</li>
+				<li>
+					<a href="#fav-modal" class="btn btn--lg" uk-toggle>Добавить в избранное</a>
+				</li>
+				<li>
+					<a href="#empty-basket-modal" class="btn btn--lg" uk-toggle>Ваша корзина пуста</a>
+				</li>
+				<li>
+					<a href="#add-to-basket-modal" class="btn btn--lg" uk-toggle>Товар добавлен в корзину</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+{% endblock content %}
