@@ -1,6 +1,7 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.woff?k5vaas") format("woff");
+  src: url("../fonts/icomoon/icomoon.woff?t9ce2r") format("woff");
+
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -36,7 +37,6 @@
 }
 .icon-envelope:before {
   content: "\e904";
-  color: #828282;
 }
 .icon-fav:before {
   content: "\e905";
@@ -82,4 +82,13 @@
 }
 .icon-play:before {
   content: "\e913";
+}
+.icon-place:before {
+  content: "\e914";
+}
+.icon-phone:before {
+  content: "\e915";
+}
+.icon-calnedar:before {
+  content: "\e916";
 }

@@ -424,3 +424,32 @@
     }
   }
 }
+
+.stores-form {
+  margin: 0;
+  @media (min-width: $mob-s) {
+    max-width: 670px;
+  }
+
+  .btns-wrapper {
+    @media (min-width: $mob-s) {
+      justify-content: flex-start;
+    }
+    & > * {
+      margin: 0 5px 10px;
+    }
+  }
+
+  .uk-grid {
+    & > div {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @media (min-width: $mob-s) {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.store {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-w) {
+    margin-bottom: 80px;
+  }
+}
+
+.info-tel,
+.info-timework,
+.info-pin {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 42px;
+  &:before {
+    font-family: "icomoon";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    color: $black;
+  }
+
+  .small-title {
+    margin-bottom: 10px;
+  }
+}
+
+.info-pin {
+  &:before {
+    content: "\e914";
+    font-size: 24px;
+    top: 6px;
+  }
+}
+
+.info-tel {
+  &:before {
+    content: "\e915";
+  }
+}
+
+.info-timework {
+  &:before {
+    content: "\e916";
+  }
+}
+
+.store-info {
+  .small-title {
+    margin-bottom: 10px;
+  }
+}
+
+.store-addres-list {
+  @include list-reset;
+
+  li {
+    padding: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $mediumGray;
+
+    @media (min-width: $tablet-w) {
+      padding: 40px 0 20px;
+    }
+
+    &:first-child {
+      border-top: 1px solid $mediumGray;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .info-pin {
+      flex-grow: 2;
+    }
+
+    .info-tel {
+      flex-grow: 1;
+    }
+
+    .info-timework {
+      flex-grow: 1;
+    }
+  }
+}
+
+#map {
+  width: 100%;
+  height: 260px;
+
+  @media (min-width: $mob-s) {
+    height: 100%;
+  }
+}

@@ -10,7 +10,8 @@
     margin-bottom: 80px;
   }
 
-  h2 {
+  h2,
+  .title-h2 {
     margin-bottom: 40px;
   }
 
@@ -134,25 +135,6 @@
   }
 }
 
-.brand-detail-section {
-  &__info {
-    @media (min-width: $mob-s) {
-      padding-right: 13%;
-    }
-  }
-
-  &__desc {
-    margin-top: 40px;
-
-    @media (min-width: $mob-s) {
-      margin-top: 0;
-      padding-left: 13%;
-      height: 100%;
-      border-left: 1px solid $mediumGray;
-    }
-  }
-}
-
 .section-brands {
   margin-bottom: 40px;
 }
@@ -180,4 +162,8 @@
   .title-h1 {
     margin-bottom: 0;
   }
+}
+
+.section-stores {
+  padding-bottom: 40px;
 }

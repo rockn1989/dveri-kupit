@@ -89,4 +89,10 @@
       color: $black;
     }
   }
+
+  &--variable-width {
+    .slide {
+      width: auto;
+    }
+  }
 }
