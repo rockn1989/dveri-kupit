@@ -388,11 +388,20 @@
   }
 
   .form-group {
+    margin: 0;
+    padding: 0;
+    border: none;
     margin-bottom: 20px;
 
     &--lg {
       margin-bottom: 40px;
     }
+  }
+
+  .form-group__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -450,6 +459,122 @@
       @media (min-width: $mob-s) {
         margin: 0;
       }
+    }
+  }
+}
+
+.order-form-wrapper {
+  padding-top: 40px;
+  border-top: 1px solid $mediumGray;
+}
+
+.order-info-wrapper {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid $mediumGray;
+  @media (min-width: $tablet-w) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    margin-left: auto;
+    padding-left: 20px;
+    border-left: 1px solid $mediumGray;
+    height: 100%;
+    max-width: 575px;
+  }
+}
+
+.order-form {
+  margin-top: 40px;
+  margin-bottom: 0;
+  fieldset {
+    max-width: 555px;
+  }
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .order-item {
+    padding-right: 0;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  .order-item__price {
+    display: flex;
+    align-items: center;
+  }
+
+  .order-item__img {
+    padding: 15px 30px;
+    width: 110px;
+    height: 126px;
+  }
+
+  .order-item__info {
+    margin-bottom: 0;
+  }
+
+  .order-list-sticky-wrapper {
+    flex-grow: 1;
+  }
+}
+
+.order-amount {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: $gray;
+
+  @media (min-width: $tablet-w) {
+    margin-top: 0;
+    padding: 40px;
+  }
+
+  &__section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (min-width: $tablet-w) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__val {
+    font-size: 20px;
+    line-height: 30px;
+    flex-shrink: 0;
+
+    @media (min-width: $tablet-w) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__val--lg {
+    font-size: 30px;
+    line-height: 36px;
+
+    @media (min-width: $tablet-w) {
+      font-size: 48px;
+      line-height: 58px;
     }
   }
 }

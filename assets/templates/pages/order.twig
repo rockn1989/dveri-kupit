@@ -1,0 +1,225 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Оформление заказа" %}
+{% set bread = ['Главная', 'Корзина', 'Оформление заказа'] %}
+
+{% block content %}
+
+	<!-- begin section-order -->
+	<section class="section-order">
+		<div class="container">
+			<h1>Оформление заказа</h1>
+
+			<div class="order-form-wrapper">
+				<a href="#auth-enter-modal" class="btn btn--md btn--white" uk-toggle>Авторизоваться</a>
+
+				<form action="" class="default-form order-form">
+					<div class="uk-grid">
+						<div class="uk-width-1-2@m">
+							<fieldset class="form-group form-group--lg">
+								<div class="form-group__title">Ваши данные</div>
+								<div class="form-group">
+									<label for="o-name">Ваше имя</label>
+									<input id="o-name" type="text" placeholder="Иванов Иван">
+								</div>
+
+								<div class="form-group">
+									<label for="o-tel">Телефон</label>
+									<input id="o-tel" type="text" class="js__input-mask" placeholder="+7 ( )">
+								</div>
+
+								<div class="form-group">
+									<label for="o-email">Email</label>
+									<input id="o-email" type="email" placeholder="Email">
+								</div>
+							</fieldset>
+
+							<fieldset class="form-group form-group--lg">
+								<div class="form-group__title">Вариант доставки</div>
+								<div class="form-group">
+									<label for="radio-o-1" class="custom-radio">
+										<input id="radio-o-1" type="radio" name="radio-o-delivery" checked="">
+										<span class="custom-radio__input"></span>
+										<span class="custom-radio__label">Доставка курьером</span>
+									</label>
+								</div>
+
+								<div class="form-group">
+									<textarea placeholder="Москва, улица Маршала Еременко, дом 43"></textarea>
+								</div>
+
+								<div class="form-group">
+									<label for="radio-o-2" class="custom-radio">
+										<input id="radio-o-2" type="radio" name="radio-o-delivery" checked="">
+										<span class="custom-radio__input"></span>
+										<span class="custom-radio__label">Самовывоз</span>
+									</label>
+								</div>
+							</fieldset>
+
+							<fieldset class="form-group form-group--lg">
+								<div class="form-group__title">Выберите вариант оплаты</div>
+								<div class="form-group">
+									<label for="radio-pay-1" class="custom-radio">
+										<input id="radio-pay-1" type="radio" name="radio-o-pay" checked="">
+										<span class="custom-radio__input"></span>
+										<span class="custom-radio__label">Наличными курьеру</span>
+									</label>
+								</div>
+
+								<div class="form-group">
+									<label for="radio-pay-2" class="custom-radio">
+										<input id="radio-pay-2" type="radio" name="radio-o-pay" checked="">
+										<span class="custom-radio__input"></span>
+										<span class="custom-radio__label">Оплата картой курьеру
+											<i class="tooltip-question" uk-tooltip="title: Подсказка по определенному пункту; pos: right">?</i>
+										</span>
+									</label>
+								</div>
+
+								<div class="form-group">
+									<label for="radio-pay-2" class="custom-radio">
+										<input id="radio-pay-2" type="radio" name="radio-o-pay" checked="">
+										<span class="custom-radio__input"></span>
+										<span class="custom-radio__label">Оплата картой с сайта</span>
+									</label>
+								</div>
+							</fieldset>
+
+							<fieldset class="form-group form-group--lg">
+								<div class="form-group__title">Комментарий к заказ</div>
+								<textarea></textarea>
+							</fieldset>
+
+							<fieldset class="form-group form-group--lg">
+								<div class="politics">
+									Нажимая «Отправить заказ», вы соглашаетесь на обработку персональных данных в соответствии с
+									<a href="" class="blue">Политикой конфиденциальности</a>
+								</div>
+							</fieldset>
+
+							<button class="btn btn--lg">Оформить заказ</button>
+
+						</div>
+						<div class="uk-width-1-2@m">
+							<div class="order-info-wrapper">
+
+								<div class="order-info">
+									<div class="form-group__title">Товаров в корзине (<span>2</span>)</div>
+
+									<div id="sticky-wrapper" class="order-list-sticky-wrapper">
+										<div class="order-list" uk-sticky="bottom: #sticky-wrapper; media: @m">
+											<div class=" order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture>
+															<source srcset="img/media/webp/order.webp" type="image/webp">
+															<source srcset="img/media/webp/order.png" type="image/png">
+															<img src="img/media/webp/order.png" alt="" loading="lazy">
+														</picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+
+											<div class="order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture></picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+									<div id="order-amount" class="order-amount">
+										<div class="order-amount__section">
+											<div class="order-amount__name">Доставка</div>
+											<div class="order-amount__val">650 р.</div>
+										</div>
+
+										<div class="form-group">
+											<label for="cupon">Введите купон для скидки</label>
+											<input type="text">
+										</div>
+
+										<div class="order-amount__section">
+											<div class="order-amount__name">Скидка</div>
+											<div class="order-amount__val">225 р.</div>
+										</div>
+
+										<div class="order-amount__section">
+											<div class="order-amount__name">Итого к оплате</div>
+											<div class="order-amount__val order-amount__val--lg">80 190 р.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- end section-order -->
+{% endblock %}

@@ -32,7 +32,8 @@
 
     @media (min-width: $tablet-w) {
       margin-bottom: 0;
-      width: 65%;
+      width: auto;
+      flex-grow: 1;
     }
   }
 
