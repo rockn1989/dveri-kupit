@@ -93,6 +93,10 @@
   &--variable-width {
     .slide {
       width: auto;
+
+      @media (min-width: $tablet-w) {
+        width: auto;
+      }
     }
   }
 }

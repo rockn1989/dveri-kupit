@@ -1,0 +1,161 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Корзина" %}
+{% set bread = ['Главная', 'Корзина'] %}
+
+{% block content %}
+
+	<!-- begin section-basket -->
+	<section class="section-basket">
+		<div class="container">
+			<h1>Корзина</h1>
+
+			<!-- begin basket -->
+			<div class="basket">
+				<form action="" class="default-form">
+					<div class="order-list">
+						<div class="order-item">
+							<div class="order-item__info">
+								<div class="order-item__img">
+									<picture>
+										<source srcset="img/media/webp/order.webp" type="image/webp">
+										<source srcset="img/media/webp/order.png" type="image/png">
+										<img src="img/media/webp/order.png" alt="" loading="lazy">
+									</picture>
+								</div>
+
+								<div class="order-item__desc">
+									<div class="order-item__desc-options">
+										<div class="order-item__title">
+											<a href="">Дверь межкомнатная 225</a>
+										</div>
+
+										<div class="order-item__value">Серый шелк (Ral 7047)</div>
+										<div class="order-item__value">Остекленная</div>
+
+										<div class="order-item__options">
+											<div class="option">
+												<div class="option__type">Размер</div>
+												<div class="option__value">600х2000</div>
+											</div>
+
+											<div class="option">
+												<div class="option__type">Тип открывания</div>
+												<div class="option__value">Распашная</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="order-item__price">
+										<div class="order-item__price-value">11 290 Р.</div>
+										<div class="small-title">за 1 шт</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="order-item__action">
+
+								<div class="order-item__calc">
+									<div class="calc-control">
+										<span class="minus">—</span>
+										<input type="text" class="calc-control__value" value="1">
+										<span class="plus">+</span>
+									</div>
+									<div class="small-title">шт</div>
+								</div>
+
+								<div class="order-item__amount">35 200 р.</div>
+							</div>
+
+							<a href="#" class="close js__delete-order-item icon-close"></a>
+
+						</div>
+
+						<div class="order-item">
+							<div class="order-item__info">
+								<div class="order-item__img">
+									<picture></picture>
+								</div>
+
+								<div class="order-item__desc">
+									<div class="order-item__desc-options">
+										<div class="order-item__title">
+											<a href="">Дверь межкомнатная 225</a>
+										</div>
+
+										<div class="order-item__value">Серый шелк (Ral 7047)</div>
+										<div class="order-item__value">Остекленная</div>
+
+										<div class="order-item__options">
+											<div class="option">
+												<div class="option__type">Размер</div>
+												<div class="option__value">600х2000</div>
+											</div>
+
+											<div class="option">
+												<div class="option__type">Тип открывания</div>
+												<div class="option__value">Распашная</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="order-item__price">
+										<div class="order-item__price-value">11 290 Р.</div>
+										<div class="small-title">за 1 шт</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="order-item__action">
+
+								<div class="order-item__calc">
+									<div class="calc-control">
+										<span class="minus">—</span>
+										<input type="text" class="calc-control__value" value="1">
+										<span class="plus">+</span>
+									</div>
+									<div class="small-title">шт</div>
+								</div>
+
+								<div class="order-item__amount">35 200 р.</div>
+							</div>
+
+							<a href="#" class="close js__delete-order-item icon-close"></a>
+
+						</div>
+					</div>
+
+					<div class="h-panel">
+						<div class="uk-grid">
+							<div class="uk-width-1-3@m">
+								<label for="cupon">
+									Введите купон для скидки
+								</label>
+								<input id="cupon" type="text" placeholder="№">
+							</div>
+							<div class="uk-width-2-3@m">
+								<div class="basket-order">
+									<div class="amount">
+										<div class="amount__title">
+											Итого к оплате
+											<div class="small-title">Сумма НДС: 0 р.</div>
+										</div>
+										<div class="amount__price">40 190 р.</div>
+									</div>
+									<button type="submit" class="btn btn--md">Оформить заказ</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- end basket -->
+
+		</div>
+	</section>
+	<!-- end section-basket -->
+
+{% endblock %}
