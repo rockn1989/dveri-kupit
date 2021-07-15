@@ -171,3 +171,11 @@
 .section-order {
   padding-bottom: 40px;
 }
+
+.section-account {
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-w) {
+    padding-left: 20px;
+  }
+}

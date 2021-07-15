@@ -97,4 +97,15 @@ $(function () {
     $(this).toggleClass("open");
     $(".filter-form__body").slideToggle();
   });
+
+  /**
+   * Toggle account menu
+   */
+
+  $(".account-menu__toggle-btn").on("click", function (e) {
+    e.preventDefault();
+
+    $(this).toggleClass("open");
+    $(".account-menu").stop(true, true).slideToggle();
+  });
 });

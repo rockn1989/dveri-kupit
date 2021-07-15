@@ -1,0 +1,90 @@
+.account-menu-wrapper {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid $black;
+
+  @media (min-width: $tablet-w) {
+    margin-bottom: 0;
+  }
+}
+
+.account-menu {
+  @include list-reset;
+  display: none;
+  position: absolute;
+  top: calc(100% - 2px);
+  left: -1px;
+  right: -1px;
+  padding: 0 20px 20px;
+  background-color: #fff;
+  border: 1px solid $black;
+  border-top: 1px solid $white;
+  z-index: 800;
+
+  @media (min-width: $tablet-w) {
+    display: block !important;
+    position: static;
+    padding: 0;
+    border: none;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    line-height: 1;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding-right: 5px;
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+    color: $darkGray;
+    &:after {
+      content: "\e903";
+      font-family: "icomoon";
+      font-size: 10px;
+      position: absolute;
+      top: 2px;
+      right: 0;
+      display: none;
+    }
+  }
+
+  &__item {
+    &.active {
+      .account-menu__link {
+        color: $black;
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.account-menu__toggle-btn {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  &:after {
+    content: "\e903";
+    font-family: "icomoon";
+    font-size: 10px;
+    position: absolute;
+    top: 2px;
+    right: 0;
+  }
+
+  &.open {
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+}
