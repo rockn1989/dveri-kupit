@@ -1,0 +1,87 @@
+{% extends "../layouts/main-with-left-block.twig" %}
+{% set title = "Избранное" %}
+{% set bread = ['Главная', 'Избранное'] %}
+
+{% block leftSide %}
+	<div class="left-menu">
+		<div class="account-menu-wrapper">
+			<a href="" class="account-menu__toggle-btn uk-hidden@m">Меню</a>
+			<ul class="account-menu">
+				<li class="account-menu__item">
+					<a href="#" class="account-menu__link">Мои данные</a>
+				</li>
+				<li class="account-menu__item">
+					<a href="#" class="account-menu__link">Мои заказы</a>
+				</li>
+				<li class="account-menu__item">
+					<a href="#" class="account-menu__link">Мои адреса</a>
+				</li>
+				<li class="account-menu__item active">
+					<a href="#" class="account-menu__link">Избранное</a>
+				</li>
+				<li class="account-menu__item">
+					<a href="#" class="account-menu__link">Адреса</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+
+	<!-- begin section-account -->
+	<div class="section-account">
+		<div class="container">
+			<h2 class="title-h2 uk-margin-medium-bottom">Избранное</h2>
+
+			<section class="catalog-body">
+				<div class="catalog-body__list grid-view">
+
+					{% for i in 1..12 %}
+
+						<div class="card">
+							<div class="card__inner">
+								<div class="card__header">
+									<a href="">
+										<picture class="card__img">
+											<source srcset="img/media/webp/product-slide-1.webp" type="image/webp">
+											<source srcset="img/media/sliders/product-slide-1.png" type="image/png">
+											<img src="img/media/sliders/product-slide-1.png" width="117" height="285" alt="" loading="lazy">
+										</picture>
+									</a>
+
+									<div class="stocks"></div>
+									<div class="add-favorite">
+										<a href="" class="icon-fav" uk-tooltip="title: Добавить в избранное; pos: right"></a>
+										<a href="" class="icon-fav-fill visible" uk-tooltip="title: Удалить из избранного; pos: right"></a>
+									</div>
+								</div>
+
+								<div class="card__body">
+									<div class="card__title">
+										<a href="">Uno Art Line</a>
+									</div>
+									<div class="card__desc">
+										<div class="card__price">
+											<div class="card__price-current">от 6 870 Р.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+				<div class="h-panel border-vertical uk-text-center">
+					<a href="#" class="show-more-item icon-repeat">Показать еще</a>
+				</div>
+
+				<div class="h-panel">
+					{% include "../includes/components/pagination.twig" %}
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- end section-account -->
+
+{% endblock %}

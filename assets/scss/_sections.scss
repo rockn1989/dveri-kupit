@@ -178,4 +178,11 @@
   @media (min-width: $tablet-w) {
     padding-left: 20px;
   }
+
+  .card {
+    .add-favorite {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
