@@ -1,89 +1,94 @@
-{% extends "../layouts/main-with-left-block.twig" %}
+{% extends "../layouts/main.twig" %}
 {% set title = "Личный кабинет" %}
 {% set bread = ['Главная', 'Личный кабинет'] %}
-
-{% block leftSide %}
-	<div class="left-menu">
-		<div class="account-menu-wrapper">
-			<a href="" class="account-menu__toggle-btn uk-hidden@m">Меню</a>
-			<ul class="account-menu">
-				<li class="account-menu__item active">
-					<a href="#" class="account-menu__link">Мои данные</a>
-				</li>
-				<li class="account-menu__item">
-					<a href="#" class="account-menu__link">Мои заказы</a>
-				</li>
-				<li class="account-menu__item">
-					<a href="#" class="account-menu__link">Мои адреса</a>
-				</li>
-				<li class="account-menu__item">
-					<a href="#" class="account-menu__link">Избранное</a>
-				</li>
-				<li class="account-menu__item">
-					<a href="#" class="account-menu__link">Адреса</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-{% endblock %}
 
 {% block content %}
 
 	<!-- begin section-account -->
 	<div class="section-account">
 		<div class="container">
-			<h2 class="title-h2 uk-margin-medium-bottom">Мои данные</h2>
-
-			<div class="account-form-wrapper">
-				<form action="" class="default-form account-form-data uk-margin-large-bottom">
-					<fieldset class="form-group">
-						<div class="form-group">
-							<label for="a-name">Имя</label>
-							<input id="a-name" type="text" placeholder="Иванов Иван">
+			<div class="uk-grid">
+				<div class="uk-width-1-4@m">
+					<div class="left-menu">
+						<div class="account-menu-wrapper">
+							<a href="" class="account-menu__toggle-btn uk-hidden@m">Меню</a>
+							<ul class="account-menu">
+								<li class="account-menu__item active">
+									<a href="#" class="account-menu__link">Мои данные</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="#" class="account-menu__link">Мои заказы</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="#" class="account-menu__link">Мои адреса</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="#" class="account-menu__link">Избранное</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="#" class="account-menu__link">Адреса</a>
+								</li>
+							</ul>
 						</div>
-						<div class="form-group">
-							<label for="a-tel">Телефон</label>
-							<input id="a-tel" type="text" class="js__input-mask" placeholder="+7 ( )">
-						</div>
-						<div class="form-group">
-							<label for="a-email">Email</label>
-							<input id="a-email" type="email" placeholder="example@mail.com">
-						</div>
-						<div class="form-group">
-							<label for="a-name">Дата рождения</label>
-							<input type="text" class="datepicker-here" placeholder="13.02.1990">
-						</div>
-					</fieldset>
-
-					<div class="btns-wrapper btns-wrapper--align-left">
-						<button class="btn btn--lg" type="submit">Сохранить</button>
-						<button class="btn btn--md btn--white" type="reset">Отменить</button>
 					</div>
-				</form>
+				</div>
+				<div class="uk-width-3-4@m">
+					<div class="account-content">
+						<h2 class="title-h2 uk-margin-medium-bottom">Мои данные</h2>
 
-				<div class="form-group__title uk-margin-small-bottom">Изменить пароль</div>
+						<div class="account-form-wrapper">
+							<form action="" class="default-form account-form-data uk-margin-large-bottom">
+								<fieldset class="form-group">
+									<div class="form-group">
+										<label for="a-name">Имя</label>
+										<input id="a-name" type="text" placeholder="Иванов Иван">
+									</div>
+									<div class="form-group">
+										<label for="a-tel">Телефон</label>
+										<input id="a-tel" type="text" class="js__input-mask" placeholder="+7 ( )">
+									</div>
+									<div class="form-group">
+										<label for="a-email">Email</label>
+										<input id="a-email" type="email" placeholder="example@mail.com">
+									</div>
+									<div class="form-group">
+										<label for="a-name">Дата рождения</label>
+										<input type="text" class="datepicker-here" placeholder="13.02.1990">
+									</div>
+								</fieldset>
 
-				<form action="" class="default-form account-form-password">
-					<fieldset class="form-group">
-						<div class="form-group">
-							<label for="a-pass">Старый пароль</label>
-							<input id="a-pass" type="password" placeholder="********">
-						</div>
-						<div class="form-group">
-							<label for="a-pass-new">Новый пароль</label>
-							<input id="a-pass-new" type="text">
-						</div>
-						<div class="form-group">
-							<label for="a-pass-repeat">Подтвердите новый пароль</label>
-							<input id="a-pass-repeat" type="password">
-						</div>
-					</fieldset>
+								<div class="btns-wrapper btns-wrapper--align-left">
+									<button class="btn btn--lg" type="submit">Сохранить</button>
+									<button class="btn btn--md btn--white" type="reset">Отменить</button>
+								</div>
+							</form>
 
-					<div class="btns-wrapper btns-wrapper--align-left">
-						<button class="btn btn--lg" type="submit">Сохранить</button>
-						<button class="btn btn--md btn--white" type="reset">Отменить</button>
+							<div class="form-group__title uk-margin-small-bottom">Изменить пароль</div>
+
+							<form action="" class="default-form account-form-password">
+								<fieldset class="form-group">
+									<div class="form-group">
+										<label for="a-pass">Старый пароль</label>
+										<input id="a-pass" type="password" placeholder="********">
+									</div>
+									<div class="form-group">
+										<label for="a-pass-new">Новый пароль</label>
+										<input id="a-pass-new" type="text">
+									</div>
+									<div class="form-group">
+										<label for="a-pass-repeat">Подтвердите новый пароль</label>
+										<input id="a-pass-repeat" type="password">
+									</div>
+								</fieldset>
+
+								<div class="btns-wrapper btns-wrapper--align-left">
+									<button class="btn btn--lg" type="submit">Сохранить</button>
+									<button class="btn btn--md btn--white" type="reset">Отменить</button>
+								</div>
+							</form>
+						</div>
 					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
