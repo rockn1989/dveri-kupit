@@ -95,7 +95,7 @@ $(function () {
 
   $(".filter-form__toggle").on("click", function () {
     $(this).toggleClass("open");
-    $(".filter-form__body").slideToggle();
+    $(".filter-form__body").stop(true, true).slideToggle();
   });
 
   /**
