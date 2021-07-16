@@ -126,6 +126,8 @@
   position: relative;
   cursor: pointer;
   display: block;
+  outline: none;
+
   input[type="checkbox"] {
     position: absolute;
     top: 0;
@@ -251,7 +253,7 @@
   display: block;
   border: 1px solid $black;
   cursor: pointer;
-  /* max-width: 325px; */
+
   input[type="radio"] {
     position: absolute;
     top: 0;
@@ -296,6 +298,7 @@
       border-radius: 50%;
       background-color: $gray;
       font-size: 8px;
+      line-height: 8px;
       color: $darkGray;
       font-family: "icomoon";
       flex-shrink: 0;
@@ -431,6 +434,7 @@
     @media (min-width: $mob-s) {
       margin: 0;
     }
+
     &:first-child {
       margin-left: 0;
     }
@@ -441,7 +445,9 @@
       justify-content: flex-start;
     }
     & > * {
-      margin: 0 5px 10px;
+      @media (min-width: $mob-s) {
+        margin: 0 5px 10px;
+      }
     }
   }
 }

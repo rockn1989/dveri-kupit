@@ -33,6 +33,11 @@ $(function () {
       .slideToggle("350");
   });
 
+  $(".js__toggle-icon").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("active");
+  });
+
   /**
    * Left menu
    */

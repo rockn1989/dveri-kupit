@@ -2,7 +2,14 @@
   height: 100%;
   padding-top: 40px;
   @media (min-width: $desk-w) {
-    padding: 40px 0 0 40px;
     border-left: 1px solid $mediumGray;
+  }
+
+  @media (min-width: $tablet-w) {
+    padding-left: 20px;
+  }
+
+  @media (min-width: 1300px) {
+    padding: 40px 0 0 40px;
   }
 }

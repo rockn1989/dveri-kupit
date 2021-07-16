@@ -83,11 +83,17 @@
     @media (min-width: $mob-s) {
       width: calc(50% - 20px);
     }
+
     @media (min-width: $desk-w) {
       margin-bottom: 0;
-      padding: 0 40px;
+      padding: 0 20px;
       border-right: 1px solid $mediumGray;
     }
+
+    @media (min-width: $lg) {
+      padding: 0 40px;
+    }
+
     &.section-1 {
       padding-left: 0;
       @media (min-width: $desk-w) {
