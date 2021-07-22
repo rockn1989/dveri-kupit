@@ -1,0 +1,173 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Мои адреса" %}
+{% set bread = ['Главная', 'Мои адреса'] %}
+
+
+{% block content %}
+
+	<!-- begin section-account -->
+	<section class="section-account">
+		<div class="container">
+
+			<div class="uk-grid">
+				<div class="uk-width-1-4@m">
+					<div class="left-menu">
+						<div class="account-menu-wrapper">
+							<a href="" class="account-menu__toggle-btn uk-hidden@m">Меню</a>
+							<ul class="account-menu">
+								<li class="account-menu__item">
+									<a href="account.html" class="account-menu__link">Мои данные</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="account-order.html" class="account-menu__link">Мои заказы</a>
+								</li>
+								<li class="account-menu__item active">
+									<a href="account-address.html" class="account-menu__link">Мои адреса</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="account-favorite.html" class="account-menu__link">Избранное</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="#" class="account-menu__link">Выход</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-3-4@m">
+					<div class="account-content">
+						<h2 class="title-h2 uk-margin-medium-bottom">Мои адреса</h2>
+
+						<form action="" class="default-form uk-margin-medium-bottom uk-padding-medium-bottom border-bottom">
+							<div class="form-group">
+								<div class="form-group__title">Основной адрес доставки</div>
+							</div>
+
+
+							<div class="uk-grid">
+								<div class="uk-width-1-3@m">
+									<div class="form-group"><input type="text" placeholder="Индекс"></div>
+								</div>
+								<div class="uk-width-2-3@m">
+									<div class="form-group"><input type="text" placeholder="Город"></div>
+								</div>
+
+								<div class="uk-width-1-2@m">
+									<div class="form-group"><input type="text" placeholder="Улица"></div>
+								</div>
+								<div class="uk-width-1-6@m">
+									<div class="form-group"><input type="text" placeholder="Дом"></div>
+								</div>
+								<div class="uk-width-1-6@m">
+									<div class="form-group"><input type="text" placeholder="Строение"></div>
+								</div>
+								<div class="uk-width-1-6@m">
+									<div class="form-group"><input type="text" placeholder="Квартира"></div>
+								</div>
+
+							</div>
+
+							<div class="btns-wrapper btns-wrapper--align-left">
+								<button class="btn btn--lg">Сохранить</button>
+								<button class="btn btn--white">Отменить</button>
+							</div>
+						</form>
+
+						<div class="address-list-wrapper">
+							<div class="title-h4">Дополнительные адреса доставки</div>
+
+							<ul class="address-list">
+								<li class="address-list__item">
+									<div class="address-list__val">Москва, улица Маршала Еременко, дом 43</div>
+									<div class="address-list__controls">
+										<div class="dotts-items">
+											<a href="" class="blue js__edit-form">Редактировать</a>
+											<a href="" class="blue">Удалить</a>
+										</div>
+									</div>
+
+									<div class="address-list__edit-form">
+										<form action="" class="default-form">
+
+											<div class="uk-grid">
+												<div class="uk-width-1-3@m">
+													<div class="form-group"><input type="text" placeholder="Индекс"></div>
+												</div>
+												<div class="uk-width-2-3@m">
+													<div class="form-group"><input type="text" placeholder="Город"></div>
+												</div>
+
+												<div class="uk-width-1-2@m">
+													<div class="form-group"><input type="text" placeholder="Улица"></div>
+												</div>
+												<div class="uk-width-1-6@m">
+													<div class="form-group"><input type="text" placeholder="Дом"></div>
+												</div>
+												<div class="uk-width-1-6@m">
+													<div class="form-group"><input type="text" placeholder="Строение"></div>
+												</div>
+												<div class="uk-width-1-6@m">
+													<div class="form-group"><input type="text" placeholder="Квартира"></div>
+												</div>
+
+											</div>
+
+											<div class="btns-wrapper btns-wrapper--align-left">
+												<button class="btn btn--lg">Сохранить</button>
+											</div>
+										</form>
+									</div>
+								</li>
+
+								<li class="address-list__item">
+									<div class="address-list__val">Подольск, улица Партизан, дом 44, кв. 123</div>
+									<div class="address-list__controls">
+										<div class="dotts-items">
+											<a href="" class="blue js__edit-form">Редактировать</a>
+											<a href="" class="blue">Удалить</a>
+										</div>
+									</div>
+									<div class="address-list__edit-form">
+										<form action="" class="default-form">
+
+											<div class="uk-grid">
+												<div class="uk-width-1-3@m">
+													<div class="form-group"><input type="text" placeholder="Индекс"></div>
+												</div>
+												<div class="uk-width-2-3@m">
+													<div class="form-group"><input type="text" placeholder="Город"></div>
+												</div>
+
+												<div class="uk-width-1-2@m">
+													<div class="form-group"><input type="text" placeholder="Улица"></div>
+												</div>
+												<div class="uk-width-1-6@m">
+													<div class="form-group"><input type="text" placeholder="Дом"></div>
+												</div>
+												<div class="uk-width-1-6@m">
+													<div class="form-group"><input type="text" placeholder="Строение"></div>
+												</div>
+												<div class="uk-width-1-6@m">
+													<div class="form-group"><input type="text" placeholder="Квартира"></div>
+												</div>
+
+											</div>
+
+											<div class="btns-wrapper btns-wrapper--align-left">
+												<button class="btn btn--lg">Сохранить</button>
+											</div>
+										</form>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<a href="" class="btn btn--md">Добавить адрес</a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end section-account -->
+{% endblock %}

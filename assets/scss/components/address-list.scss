@@ -1,0 +1,66 @@
+.address-list-wrapper {
+  margin-bottom: 40px;
+}
+
+.address-list {
+  @include list-reset;
+  &__item {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid $mediumGray;
+
+    &:last-child {
+      border-bottom: 1px solid $mediumGray;
+    }
+  }
+
+  &__val {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__controls {
+    margin-left: auto;
+  }
+
+  &__edit-form {
+    padding-top: 20px;
+    display: none;
+
+    form {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dotts-items {
+  display: flex;
+  align-items: center;
+  & > * {
+    position: relative;
+    margin-right: 20px;
+    padding-right: 23px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 3px;
+      height: 3px;
+      display: block;
+      background-color: $black;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
