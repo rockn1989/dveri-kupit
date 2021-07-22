@@ -1,0 +1,139 @@
+.account-order-list {
+  @include list-reset;
+
+  &__item {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid $mediumGray;
+
+    @media (min-width: $tablet-w) {
+      padding: 40px 0;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $mediumGray;
+    }
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    padding-right: 25px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 16px;
+    line-height: 18px;
+
+    @media (min-width: $tablet-w) {
+      padding-right: 35px;
+    }
+
+    & > div {
+      width: 50%;
+
+      @media (min-width: $mob-s) {
+        width: auto;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__info-status {
+    @media (min-width: $mob-s) {
+      margin-left: auto;
+    }
+  }
+
+  &__info-order,
+  &__info-date {
+    margin-bottom: 10px;
+
+    @media (min-width: $mob-s) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0 !important;
+    width: 20px !important;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    &:after {
+      content: "\e902";
+      font-family: "icomoon";
+      font-size: 10px;
+      line-height: 10px;
+    }
+
+    &.open {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+  }
+
+  &__status {
+    margin-right: 30px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__orders {
+    padding-top: 40px;
+    width: 100%;
+    display: none;
+  }
+
+  &__controls {
+    margin-left: auto;
+  }
+
+  .order-item {
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .order-list {
+    padding-top: 20px;
+    width: 100%;
+    border: none;
+    border-top: 1px solid $mediumGray;
+
+    .order-item__action {
+      a {
+        width: 100%;
+
+        @media (min-width: $mob-s) {
+          width: auto;
+        }
+        @media (min-width: $tablet-w) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .order-item__img {
+    padding: 15px 30px;
+    width: 110px;
+    height: 126px;
+  }
+}

@@ -1,0 +1,371 @@
+{% extends "../layouts/main.twig" %}
+{% set title = "Мои заказы" %}
+{% set bread = ['Главная', 'Личный кабинет', 'Мои заказы'] %}
+
+{% block content %}
+
+	<!-- begin section-account -->
+	<div class="section-account">
+		<div class="container">
+			<div class="uk-grid">
+				<div class="uk-width-1-4@m">
+					<div class="left-menu">
+						<div class="account-menu-wrapper">
+							<a href="" class="account-menu__toggle-btn uk-hidden@m">Меню</a>
+							<ul class="account-menu">
+								<li class="account-menu__item">
+									<a href="account.html" class="account-menu__link">Мои данные</a>
+								</li>
+								<li class="account-menu__item active">
+									<a href="account-order.html" class="account-menu__link">Мои заказы</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="account-address.html" class="account-menu__link">Мои адреса</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="account-favorite.html" class="account-menu__link">Избранное</a>
+								</li>
+								<li class="account-menu__item">
+									<a href="#" class="account-menu__link">Выход</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-3-4@m">
+					<div class="account-content">
+						<h2 class="title-h2 uk-margin-medium-bottom">Мои заказы</h2>
+
+
+						<div class="account-order-list-wrapper">
+							<ul class="account-order-list">
+								<li class="account-order-list__item">
+									<div class="account-order-list__info">
+										<div class="account-order-list__info-order">Заказ № 123124</div>
+										<div class="account-order-list__info-date">08 октября 2021</div>
+										<div class="account-order-list__info-amount">48 990 Р.</div>
+										<div class="account-order-list__info-status">Сборка заказа</div>
+										<div class="account-order-list__info-toggle js__toggle-account-order-list"></div>
+									</div>
+
+									<div class="account-order-list__orders">
+										<div class="order-list">
+											<div class=" order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture>
+															<source srcset="img/media/webp/order.webp" type="image/webp">
+															<source srcset="img/media/webp/order.png" type="image/png">
+															<img src="img/media/webp/order.png" alt="" loading="lazy">
+														</picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="order-item__action">
+													<a href="#review-modal" class="btn btn--md btn--white" uk-toggle>Написать отзыв</a>
+												</div>
+
+											</div>
+
+											<div class="order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture></picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="order-item__action">
+													<a href="#review-modal" class="btn btn--md btn--white" uk-toggle>Написать отзыв</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+								<li class="account-order-list__item">
+									<div class="account-order-list__info">
+										<div class="account-order-list__info-order">Заказ № 123124</div>
+										<div class="account-order-list__info-date">08 октября 2021</div>
+										<div class="account-order-list__info-amount">48 990 Р.</div>
+										<div class="account-order-list__info-status">В доставке</div>
+										<div class="account-order-list__info-toggle js__toggle-account-order-list"></div>
+									</div>
+
+									<div class="account-order-list__orders">
+										<div class="order-list">
+											<div class=" order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture>
+															<source srcset="img/media/webp/order.webp" type="image/webp">
+															<source srcset="img/media/webp/order.png" type="image/png">
+															<img src="img/media/webp/order.png" alt="" loading="lazy">
+														</picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="order-item__action">
+													<a href="#review-modal" class="btn btn--md btn--white" uk-toggle>Написать отзыв</a>
+												</div>
+
+											</div>
+
+											<div class="order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture></picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="order-item__action">
+													<a href="#review-modal" class="btn btn--md btn--white" uk-toggle>Написать отзыв</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+								<li class="account-order-list__item">
+									<div class="account-order-list__info">
+										<div class="account-order-list__info-order">Заказ № 123124</div>
+										<div class="account-order-list__info-date">08 октября 2021</div>
+										<div class="account-order-list__info-amount">48 990 Р.</div>
+										<div class="account-order-list__info-status">Заказ получен</div>
+										<div class="account-order-list__info-toggle js__toggle-account-order-list"></div>
+									</div>
+
+									<div class="account-order-list__orders">
+										<div class="order-list">
+											<div class=" order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture>
+															<source srcset="img/media/webp/order.webp" type="image/webp">
+															<source srcset="img/media/webp/order.png" type="image/png">
+															<img src="img/media/webp/order.png" alt="" loading="lazy">
+														</picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="order-item__action">
+													<a href="#review-modal" class="btn btn--md btn--white" uk-toggle>Написать отзыв</a>
+												</div>
+
+											</div>
+
+											<div class="order-item">
+												<div class="order-item__info">
+													<div class="order-item__img">
+														<picture></picture>
+													</div>
+
+													<div class="order-item__desc">
+														<div class="order-item__desc-options">
+															<div class="order-item__title">
+																<a href="">Дверь межкомнатная 225</a>
+															</div>
+
+															<div class="order-item__value">Серый шелк (Ral 7047)</div>
+															<div class="order-item__value">Остекленная</div>
+
+															<div class="order-item__options">
+																<div class="option">
+																	<div class="option__type">Размер</div>
+																	<div class="option__value">600х2000</div>
+																</div>
+
+																<div class="option">
+																	<div class="option__type">Тип открывания</div>
+																	<div class="option__value">Распашная</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="order-item__price">
+															<div class="order-item__price-value">11 290 Р.</div>
+															<div class="small-title">за 1 шт</div>
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="order-item__action">
+													<a href="#review-modal" class="btn btn--md btn--white" uk-toggle>Написать отзыв</a>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<div class="h-panel border-vertical uk-text-center">
+								<a href="#" class="show-more-item icon-repeat">Показать еще</a>
+							</div>
+
+							<div class="h-panel">
+								{% include "../includes/components/pagination.twig" %}
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end section-account -->
+
+{% endblock %}
