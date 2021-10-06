@@ -29,11 +29,17 @@
     align-items: flex-start;
     overflow: hidden;
     width: 100%;
+    flex-wrap: wrap;
+    
+    @media (min-width: 550px) {
+      flex-wrap: nowrap;
+    }
 
     @media (min-width: $tablet-w) {
       margin-bottom: 0;
       width: auto;
       flex-grow: 1;
+      max-width: 70%;
     }
   }
 
@@ -43,6 +49,16 @@
     justify-content: space-between;
     flex-wrap: wrap;
     flex-grow: 1;
+
+    @media (min-width: $tablet-w) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__desc-options {
+    @media (min-width: $tablet-w) {
+      max-width: 65%;
+    }
   }
 
   &__action {
@@ -61,6 +77,7 @@
   }
 
   &__img {
+    margin-bottom: 20px;
     margin-right: 20px;
     padding: 20px;
     width: 150px;
@@ -69,6 +86,12 @@
     justify-content: center;
     align-items: center;
     background-color: $mediumGray;
+    flex-shrink: 0;
+
+    @media (min-width: 550px) {
+      margin-bottom: 0;
+    }
+
     @media (min-width: $tablet-w) {
       padding: 30px;
       width: 210px;
@@ -83,6 +106,7 @@
       height: 100%;
 
       img {
+        width: auto;
         max-height: 100%;
       }
     }
@@ -107,10 +131,13 @@
   }
 
   &__price {
-    margin-right: 8%;
     text-align: right;
     display: flex;
     align-items: center;
+
+    @media (min-width: $mob-s) {
+      margin-right: 16%;
+    }
 
     @media (min-width: $tablet-w) {
       display: block;

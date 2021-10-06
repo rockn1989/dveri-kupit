@@ -61,6 +61,16 @@
       flex-basis: 210px;
     }
   }
+
+  .tabs {
+    li {
+      margin-right: 20px;
+      a {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
 }
 
 .notification-modal {

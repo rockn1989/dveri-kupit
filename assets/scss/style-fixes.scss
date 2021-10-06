@@ -1,0 +1,81 @@
+/*___ CSS FIX ___*/
+
+.custom-radio input[type="radio"]:checked ~ .custom-radio__sizes-list:after {
+    display: block;
+}
+.custom-radio input[type="radio"]:checked ~ .custom-radio__sizes-list {
+    color: #ffffff;
+    background-color: #333333;
+}
+.custom-radio__sizes-list:after {
+  content: "\e912";
+  padding: 2px 4px;
+  margin-left: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #365edc;
+  font-size: 8px;
+  color: #ffffff;
+  font-family: "icomoon";
+  display: none;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.color-checkbox input[type="radio"]:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+.color-checkbox input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.compatible-checkbox input[type="checkbox"]:checked ~ .complect-checkbox:before {
+  content: "\e912";
+}
+
+
+.compatible-checkbox input[type="checkbox"]:disabled ~ .complect-checkbox {
+  background-color: #aaa;
+}
+
+.compatible-checkbox input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.complect-checkbox:before {
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e901";
+}
+
+/*___ END CSS FIX ___*/

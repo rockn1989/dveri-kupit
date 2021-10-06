@@ -40,4 +40,29 @@
       background-color: $black;
     }
   }
+
+  .custom-checkbox {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    input[type="checkbox"] {
+      &:checked ~ .custom-checkbox__label {
+        color: #ffffff;
+        background-color: #333333;
+      }
+    }
+  }
+
+  .custom-checkbox__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .custom-checkbox__label {
+    padding: 8px 16px;
+  }
 }
