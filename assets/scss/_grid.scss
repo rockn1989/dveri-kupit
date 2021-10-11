@@ -105,3 +105,12 @@
     margin-bottom: 80px !important;
   }
 }
+
+
+.section-content {
+  padding-bottom: 40px;
+
+  @media (min-width: $desk-w) {
+    padding-bottom: 80px;
+  }
+}

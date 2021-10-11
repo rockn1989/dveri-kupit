@@ -126,7 +126,8 @@
 .color-checkbox {
   position: relative;
   cursor: pointer;
-  display: block;
+  display: inline-block;
+  vertical-align: top;
   outline: none;
 
   input[type="checkbox"] {

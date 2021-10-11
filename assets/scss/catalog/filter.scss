@@ -141,6 +141,31 @@
       width: 100%;
       border: none;
     }
+
+    &>.checkbox-list, &>.colors-list {
+      max-height: 260px;
+      .round-plus {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+    &>.checkbox-list {
+      display: block;
+      .mCSB_container {
+        font-size: 0;
+        line-height: 0;
+      }
+      @media (min-width: $desk-w) {
+        width: 191px;
+      }
+    }
+
+    &>.colors-list {
+      @media (min-width: $desk-w) {
+        width: 225px;
+      }
+    }
   }
 
   &__buttons {
@@ -150,4 +175,17 @@
       margin-bottom: 10px;
     }
   }
+}
+
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: $blue;
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: $blue;
+}
+
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 30px;
 }

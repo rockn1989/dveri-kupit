@@ -2,10 +2,15 @@
   position: relative;
   margin-bottom: 40px !important;
   padding-bottom: 40px;
-  border-bottom: 1px solid $mediumGray;
+  height: 100%;
   @media (min-width: $tablet-w) {
     margin-bottom: 80px !important;
     padding-bottom: 80px;
+  }
+
+  &__content {
+    border-bottom: 1px solid $mediumGray;
+    height: 100%;
   }
 
   &__img {
@@ -77,7 +82,10 @@
 
   &--horizontal {
     @media (min-width: $tablet-w) {
-      display: flex;
+      .post-news__content {
+        display: flex;
+      }
+      
       .post-news__img,
       .post-news__desc {
         width: 50%;

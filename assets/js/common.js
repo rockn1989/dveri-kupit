@@ -125,4 +125,15 @@ $(function () {
       $youtube.append(iframe);
     });
   }
+
+	/*______ Catalog Scrollbar ______*/
+
+	if($('.filter-form__section').length) {
+		$('.filter-form__section>.checkbox-list, .filter-form__section>.colors-list').mCustomScrollbar({
+			axis: "y",
+			theme: "siteTheme",
+			scrollInertia: 300,
+      advanced:{ updateOnContentResize: true }
+		});
+	};
 });
