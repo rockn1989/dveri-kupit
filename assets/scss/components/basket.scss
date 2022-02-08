@@ -27,10 +27,9 @@
     margin-bottom: 30px;
     display: flex;
     align-items: flex-start;
-    overflow: hidden;
     width: 100%;
     flex-wrap: wrap;
-    
+
     @media (min-width: 550px) {
       flex-wrap: nowrap;
     }
@@ -40,6 +39,15 @@
       width: auto;
       flex-grow: 1;
       max-width: 70%;
+    }
+
+    .tooltip-block__modal {
+      top: auto;
+      left: auto;
+      bottom: -12px;
+      right: -12px;
+      max-width: 480px;
+      overflow-x: auto;
     }
   }
 
@@ -195,6 +203,10 @@
   &__type {
     margin-right: 10px;
     color: $darkGray;
+  }
+  &__value {
+    display: flex;
+    align-items: center;
   }
 }
 
